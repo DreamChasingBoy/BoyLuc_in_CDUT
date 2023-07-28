@@ -1,0 +1,74 @@
+C51 COMPILER V9.54   BUTTON                                                                07/29/2023 00:10:17 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE BUTTON
+OBJECT MODULE PLACED IN .\Objects\button.obj
+COMPILER INVOKED BY: E:\Software_installation\Keil_C51\C51\BIN\C51.EXE button.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXT
+                    -END PRINT(.\Listings\button.lst) TABS(2) OBJECT(.\Objects\button.obj)
+
+line level    source
+
+   1          #include <STC89C5xRC.H>
+   2          #include <button.h>
+   3          unsigned char buff[4][4]=
+   4          {
+   5            4,5,6,7,
+   6            8,9,10,11,
+   7            12,13,14,15,
+   8            16,17,18,19,
+   9          };
+  10          unsigned char C;
+  11          unsigned char R;
+  12          unsigned char key_s;
+  13          unsigned char key_v;
+  14          void button()
+  15          {
+  16   1        P1=0x0f; //0000 1111; 0000 1110 ;1111 0010 &0000 1111
+  17   1        if(~P1&0x0f)
+  18   1        {
+  19   2          if(key_s<255)
+  20   2          {key_s++;}
+  21   2          
+  22   2          if(P13==0)
+  23   2            C=0;
+  24   2          if(P12==0)
+  25   2            C=1;
+  26   2          if(P11==0)
+  27   2            C=2;
+  28   2          if(P10==0)
+  29   2            C=3;
+  30   2          
+  31   2          P1=0xf0;//1111 0000
+  32   2          if(P14==0)
+  33   2            R=0;
+  34   2          if(P15==0)
+  35   2            R=1;
+  36   2          if(P16==0)
+  37   2            R=2;
+  38   2          if(P17==0)
+  39   2            R=3;
+  40   2          
+  41   2          key_v=buff[3-C][3-R];
+  42   2        }
+  43   1        else
+  44   1        {
+  45   2          key_s=0;
+  46   2          key_v=0;
+  47   2        }
+  48   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     99    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+C51 COMPILER V9.54   BUTTON                                                                07/29/2023 00:10:17 PAGE 2   
+
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     20    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
