@@ -1,0 +1,26 @@
+C51 COMPILER V9.54   BUTTON                                                                02/18/2023 15:50:03 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE BUTTON
+OBJECT MODULE PLACED IN .\Objects\button.obj
+COMPILER INVOKED BY: E:\Software_installation\Keil_C51\C51\BIN\C51.EXE button.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXT
+                    -END PRINT(.\Listings\button.lst) TABS(2) OBJECT(.\Objects\button.obj)
+
+line level    source
+
+   1          #include <STC89C5xRC.H>
+   2          #include "button.h"
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   ----    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

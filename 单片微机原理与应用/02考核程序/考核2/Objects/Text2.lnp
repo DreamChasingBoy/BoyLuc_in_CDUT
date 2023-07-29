@@ -1,0 +1,4 @@
+".\Objects\main.obj",
+".\Objects\SMG.obj" 
+TO ".\Objects\Text2" 
+PRINT(".\Listings\Text2.m51") RAMSIZE(256) 

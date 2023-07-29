@@ -1,3 +1,0 @@
-".\Objects\mian.obj" 
-TO ".\Objects\L2" 
-PRINT(".\Listings\L2.m51") RAMSIZE(256) 

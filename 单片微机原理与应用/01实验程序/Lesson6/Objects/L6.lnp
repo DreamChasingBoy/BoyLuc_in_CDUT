@@ -1,0 +1,4 @@
+".\Objects\main.obj",
+".\Objects\SMG.obj" 
+TO ".\Objects\L6" 
+PRINT(".\Listings\L6.m51") RAMSIZE(256) 

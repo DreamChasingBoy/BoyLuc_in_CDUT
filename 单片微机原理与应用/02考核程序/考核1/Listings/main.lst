@@ -1,0 +1,213 @@
+C51 COMPILER V9.54   MAIN                                                                  07/29/2023 00:10:17 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: E:\Software_installation\Keil_C51\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEN
+                    -D PRINT(.\Listings\main.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <STC89C5xRC.H>
+   2          #include <SMG.h>
+   3          #include <button.h>
+   4          sbit din=P3^0;
+   5          sbit sclk=P3^2;
+   6          sbit cs=P3^1;
+   7          sbit dout=P3^3;
+   8          unsigned int t10ms=0;
+   9          #define Vref 5
+  10          float v0=0;
+  11          float count_DAC(unsigned char u);
+  12          unsigned char i=0;
+  13          unsigned char statue=0;
+  14          bit control=0;
+  15          void Timer0Init(void)   //10ms
+  16          {
+  17   1        AUXR |= 0x80;   
+  18   1        TMOD &= 0xF0;   
+  19   1        TL0 = 0x20;   
+  20   1        TH0 = 0xD1;   
+  21   1        TF0 = 0;    
+  22   1        TR0 = 1;    
+  23   1        ET0=1;
+  24   1        EA=1;
+  25   1      }
+  26          float count()
+  27          {
+  28   1        float sum=0;
+  29   1        float xianshi=0;
+  30   1        sum=mo2[1]*100+mo2[2]*10+mo2[3];
+  31   1        xianshi=(sum/4.096)*1024;
+  32   1        return xianshi;
+  33   1      }
+  34          //float counting()//
+  35          //{
+  36          //  float sum=0;
+  37          //  float xianshi=0;
+  38          //  sum=mo2[1]*100+mo2[2]*10+mo2[3];
+  39          //  xianshi=(sum/500)*256;
+  40          //  return xianshi;
+  41          //}
+  42          void Write5615(unsigned int wdata)
+  43          {
+  44   1        unsigned char i;
+  45   1        cs=0;
+  46   1        wdata<<=2;
+  47   1        for(i=0;i<12;i++)
+  48   1        {
+  49   2          sclk=0;
+  50   2          din=(wdata&0x0800)?1:0;
+  51   2          sclk=1;
+  52   2          wdata<<=1;
+  53   2        }
+  54   1        cs=1;
+C51 COMPILER V9.54   MAIN                                                                  07/29/2023 00:10:17 PAGE 2   
+
+  55   1      }
+  56          void timer0() interrupt 1
+  57          {
+  58   1        SMG_dis();
+  59   1        t10ms++;
+  60   1        button();
+  61   1      }
+  62          unsigned int volt=0;
+  63          void main()
+  64          {
+  65   1        Timer0Init();
+  66   1        while(1)
+  67   1        {
+  68   2          
+  69   2          
+  70   2          if(key_v==7&&key_s==2)//0
+  71   2          {
+  72   3            if(statue==0)
+  73   3            {
+  74   4              statue=1;
+  75   4              mo2[i]=0;
+  76   4              i++;
+  77   4            }
+  78   3          }
+  79   2          if(key_v==11&&key_s==2)//1
+  80   2          {
+  81   3            if(statue==0)
+  82   3            {
+  83   4              statue=1;
+  84   4              mo2[i]=1;
+  85   4              i++;
+  86   4            }
+  87   3          }
+  88   2          if(key_v==15&&key_s==2)//2
+  89   2          {
+  90   3            if(statue==0)
+  91   3            {
+  92   4              statue=1;
+  93   4              mo2[i]=2;
+  94   4              i++;
+  95   4            }
+  96   3          }
+  97   2          if(key_v==19&&key_s==2)//3
+  98   2          {
+  99   3            if(statue==0)
+ 100   3            {
+ 101   4              statue=1;
+ 102   4              mo2[i]=3;
+ 103   4              i++;
+ 104   4            }
+ 105   3          }
+ 106   2          if(key_v==6&&key_s==2)//4
+ 107   2          {
+ 108   3            if(statue==0)
+ 109   3            {
+ 110   4              statue=1;
+ 111   4              mo2[i]=4;
+ 112   4              i++;
+ 113   4            }
+ 114   3          }
+ 115   2          if(key_v==10&&key_s==2)//5
+ 116   2          {
+C51 COMPILER V9.54   MAIN                                                                  07/29/2023 00:10:17 PAGE 3   
+
+ 117   3            if(statue==0)
+ 118   3            {
+ 119   4              statue=1;
+ 120   4              mo2[i]=5;
+ 121   4              i++;
+ 122   4            }
+ 123   3          }
+ 124   2          if(key_v==14&&key_s==2)//6
+ 125   2          {
+ 126   3            if(statue==0)
+ 127   3            {
+ 128   4              statue=1;
+ 129   4              mo2[i]=6;
+ 130   4              i++;
+ 131   4            }
+ 132   3          }
+ 133   2          if(key_v==18&&key_s==2)//7
+ 134   2          {
+ 135   3            if(statue==0)
+ 136   3            {
+ 137   4              statue=1;
+ 138   4              mo2[i]=7;
+ 139   4              i++;
+ 140   4            }
+ 141   3          }
+ 142   2          if(key_v==5&&key_s==2)//8
+ 143   2          {
+ 144   3            if(statue==0)
+ 145   3            {
+ 146   4              statue=1;
+ 147   4              mo2[i]=8;
+ 148   4              i++;
+ 149   4            }
+ 150   3          }
+ 151   2          if(key_v==9&&key_s==2)//9
+ 152   2          {
+ 153   3            if(statue==0)
+ 154   3            {
+ 155   4              statue=1;
+ 156   4              mo2[i]=9;
+ 157   4              i++;
+ 158   4            }
+ 159   3          }
+ 160   2          if(key_v==13&&key_s==2)//input
+ 161   2          {
+ 162   3            SMG_cun=mo2;
+ 163   3          }
+ 164   2          if(key_v==17&&key_s==2)//start
+ 165   2          {
+ 166   3            SMG_cun=mo3;
+ 167   3            mo3[1]=mo2[1]+32;
+ 168   3            mo3[2]=mo2[2];
+ 169   3            mo3[3]=mo2[3];
+ 170   3          }
+ 171   2          if(key_v==4&&key_s==2)//stop
+ 172   2          {
+ 173   3            control=0;
+ 174   3          }
+ 175   2          if(P1==0x0f)
+ 176   2          {
+ 177   3            statue=0;
+ 178   3          }
+C51 COMPILER V9.54   MAIN                                                                  07/29/2023 00:10:17 PAGE 4   
+
+ 179   2          volt=mo2[1]*100+mo2[2]*10+mo2[3];
+ 180   2          Write5615(volt);
+ 181   2          
+ 182   2        }
+ 183   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    581    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     10       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

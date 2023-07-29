@@ -1,0 +1,5 @@
+".\Objects\main.obj",
+".\Objects\SMG.obj",
+".\Objects\button.obj" 
+TO ".\Objects\Text1" 
+PRINT(".\Listings\Text1.m51") RAMSIZE(256) 
