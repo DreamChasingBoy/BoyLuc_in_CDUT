@@ -1,0 +1,193 @@
+Added Component: Designator=C1(0201C)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C2(0805C)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C3(0805C)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C4(0805C)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C5(0805C)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C6(0805C)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C7(0201C)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C8(0201C)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C9(0201C)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C10(0805C)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C11(0805C)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C12(0805C)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C13(0805C)
+Add component. Clean all parameters for all variants
+Added Component: Designator=J1(Pin HDR1X3/2.54mm-S)
+Add component. Clean all parameters for all variants
+Added Component: Designator=J2(Pin HDR1X4/2.54mm-S)
+Add component. Clean all parameters for all variants
+Added Component: Designator=K1(SMD-3X6X2.5)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R3(0805R)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R4(0805R)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U1(STM-LQFP48_N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.st.com/web/en/home.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00088500.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Package Specification"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00058181.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Core"; Value = "ARM Cortex-M0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "Rev. 1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "FLASH Size (Prog) (kB)"; Value = "64"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "I/Os (High Current)"; Value = "39"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Internal RAM Size (kB)"; Value = "8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Frequency(F) (Processor speed) (MHz)"; Value = "48"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "48-Pin Low Profile Quad Flat Package, 7 x 7 mm Body, 0.5 mm Pitch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "LQFP48"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "Rev. 6, 06/2013"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packing"; Value = "Tray"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "STM32F030C8T6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 2"; Value = "Newark"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 3"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "497-14043-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 2"; Value = "06X3647"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 3"; Value = "511-STM32F030C8T6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supply Voltage(Vcc) min (V)"; Value = "2.4"; VariantName = "[No Variations]"
+Added Component: Designator=U2(SOT223)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U3(SOP-16_L10.0-W3.9-P1.27-LS6.0-BL)
+Add component. Clean all parameters for all variants
+Added Component: Designator=USB1(USB-C-SMD_TYPEC-304-BCP16)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Add into BOM"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Connector Type"; Value = "Type-C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Convert to PCB"; Value = "yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating - Power (Max)"; Value = "3A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet"; Value = "https://atta.szlcsc.com/upload/public/pdf/source/20220210/1FE0FEFF7D6A20C111212527D3DED014.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Device"; Value = "TYPEC-304-BCP16_C720629"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gender"; Value = "Ä¸×ù"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "JLCPCB Part Class"; Value = "Extended Part"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LCSC Part Name"; Value = "Type-C Ä¸×ù ÎÔÌù Í£²ú Í£²ú"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "XUNPU(Ñ¶ÆÕ)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part"; Value = "TYPEC-304-BCP16"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Style"; Value = "ÎÔÌù"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Name"; Value = "TYPEC-304-BCP16"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Contacts"; Value = "16"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Ports"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Range"; Value = "-25¡æ~+85¡æ"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Standard"; Value = "USB 3.1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier"; Value = "LCSC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Footprint"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part"; Value = "C720629"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Symbol"; Value = "TYPEC-304-BCP16"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Welding Temperature (Max)"; Value = "260¡æ"; VariantName = "[No Variations]"
+Added Component: Designator=Y1(OSC 5032-2P)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=OSC_IN Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=5V Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C2-2
+Added Pin To Net: NetName=OSC_OUT Pin=C3-1
+Added Pin To Net: NetName=GND Pin=C3-2
+Added Pin To Net: NetName=Reset Pin=C4-1
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=3V3 Pin=C5-1
+Added Pin To Net: NetName=GND Pin=C5-2
+Added Pin To Net: NetName=GND Pin=C6-1
+Added Pin To Net: NetName=3V3 Pin=C6-2
+Added Pin To Net: NetName=GND Pin=C7-1
+Added Pin To Net: NetName=3V3 Pin=C7-2
+Added Pin To Net: NetName=3V3 Pin=C8-1
+Added Pin To Net: NetName=GND Pin=C8-2
+Added Pin To Net: NetName=GND Pin=C9-1
+Added Pin To Net: NetName=NetC9_2 Pin=C9-2
+Added Pin To Net: NetName=5V Pin=C10-1
+Added Pin To Net: NetName=GND Pin=C10-2
+Added Pin To Net: NetName=3V3 Pin=C11-1
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Pin To Net: NetName=GND Pin=C12-1
+Added Pin To Net: NetName=3V3 Pin=C12-2
+Added Pin To Net: NetName=GND Pin=C13-1
+Added Pin To Net: NetName=3V3 Pin=C13-2
+Added Pin To Net: NetName=PA0 Pin=J1-1
+Added Pin To Net: NetName=3V3 Pin=J1-2
+Added Pin To Net: NetName=GND Pin=J1-3
+Added Pin To Net: NetName=3V3 Pin=J2-1
+Added Pin To Net: NetName=GND Pin=J2-2
+Added Pin To Net: NetName=SWDIO Pin=J2-3
+Added Pin To Net: NetName=SWCLK Pin=J2-4
+Added Pin To Net: NetName=Reset Pin=K1-1
+Added Pin To Net: NetName=GND Pin=K1-3
+Added Pin To Net: NetName=Reset Pin=R3-1
+Added Pin To Net: NetName=3V3 Pin=R3-2
+Added Pin To Net: NetName=NetR4_1 Pin=R4-1
+Added Pin To Net: NetName=GND Pin=R4-2
+Added Pin To Net: NetName=3V3 Pin=U1-1
+Added Pin To Net: NetName=OSC_IN Pin=U1-5
+Added Pin To Net: NetName=OSC_OUT Pin=U1-6
+Added Pin To Net: NetName=Reset Pin=U1-7
+Added Pin To Net: NetName=GND Pin=U1-8
+Added Pin To Net: NetName=3V3 Pin=U1-9
+Added Pin To Net: NetName=PA0 Pin=U1-10
+Added Pin To Net: NetName=GND Pin=U1-23
+Added Pin To Net: NetName=3V3 Pin=U1-24
+Added Pin To Net: NetName=TXD Pin=U1-30
+Added Pin To Net: NetName=RXD Pin=U1-31
+Added Pin To Net: NetName=SWDIO Pin=U1-34
+Added Pin To Net: NetName=SWCLK Pin=U1-37
+Added Pin To Net: NetName=NetR4_1 Pin=U1-44
+Added Pin To Net: NetName=GND Pin=U1-47
+Added Pin To Net: NetName=3V3 Pin=U1-48
+Added Pin To Net: NetName=GND Pin=U2-1
+Added Pin To Net: NetName=3V3 Pin=U2-2
+Added Pin To Net: NetName=3V3 Pin=U2-2
+Added Pin To Net: NetName=5V Pin=U2-3
+Added Pin To Net: NetName=GND Pin=U3-1
+Added Pin To Net: NetName=RXD Pin=U3-2
+Added Pin To Net: NetName=TXD Pin=U3-3
+Added Pin To Net: NetName=NetC9_2 Pin=U3-4
+Added Pin To Net: NetName=D+ Pin=U3-5
+Added Pin To Net: NetName=D- Pin=U3-6
+Added Pin To Net: NetName=3V3 Pin=U3-16
+Added Pin To Net: NetName=GND Pin=USB1-A1B12
+Added Pin To Net: NetName=+5 Pin=USB1-A4B9
+Added Pin To Net: NetName=D+ Pin=USB1-A7
+Added Pin To Net: NetName=D- Pin=USB1-A8
+Added Pin To Net: NetName=GND Pin=USB1-B1A12
+Added Pin To Net: NetName=+5 Pin=USB1-B4A9
+Added Pin To Net: NetName=D- Pin=USB1-B5
+Added Pin To Net: NetName=D+ Pin=USB1-B6
+Added Pin To Net: NetName=OSC_OUT Pin=Y1-1
+Added Pin To Net: NetName=OSC_IN Pin=Y1-2
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component C1 104
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component C2 104
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component C3 104
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component C4 104
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component C5 104
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component C6 104
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component C7 104
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component C8 104
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component C9 104
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component C10 104
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component C11 104
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component C12 104
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component C13 104
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component J1 Pin HDR1X3
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component J2 Pin HDR1X4
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component K1 KEY
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component R3 10K
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component R4 10K
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component U1 STM32F030C8T6
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component U2 AMS1117
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component U3 CH340C
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component USB1 TYPEC
+Added Member To Class: ClassName=STM32F030C8T6 Member=Component Y1 8MHz
+Added Room: Name=STM32F030C8T6

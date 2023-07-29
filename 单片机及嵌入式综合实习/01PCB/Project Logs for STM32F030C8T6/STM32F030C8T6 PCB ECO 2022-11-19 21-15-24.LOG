@@ -1,0 +1,21 @@
+Removed Pin From Net: NetName=OSC_IN Pin=U1-5
+Removed Pin From Net: NetName=OSC_OUT Pin=U1-6
+Removed Pin From Net: NetName=Reset Pin=U1-7
+Removed Pin From Net: NetName=PA0 Pin=U1-10
+Removed Pin From Net: NetName=TXD Pin=U1-30
+Removed Pin From Net: NetName=RXD Pin=U1-31
+Removed Pin From Net: NetName=SWDIO Pin=U1-34
+Removed Pin From Net: NetName=SWCLK Pin=U1-37
+Removed Pin From Net: NetName=NetR4_1 Pin=U1-44
+Removed Member From Class: ClassName=STM32F030C8T6 Member=U?
+Change Component Designator: OldDesignator=U? NewDesignator=U1
+Added Pin To Net: NetName=OSC_IN Pin=U1-5
+Added Pin To Net: NetName=OSC_OUT Pin=U1-6
+Added Pin To Net: NetName=Reset Pin=U1-7
+Added Pin To Net: NetName=PA0 Pin=U1-10
+Added Pin To Net: NetName=TXD Pin=U1-30
+Added Pin To Net: NetName=RXD Pin=U1-31
+Added Pin To Net: NetName=SWDIO Pin=U1-34
+Added Pin To Net: NetName=SWCLK Pin=U1-37
+Added Pin To Net: NetName=NetR4_1 Pin=U1-44
+Added Room: Name=STM32F030C8T6
