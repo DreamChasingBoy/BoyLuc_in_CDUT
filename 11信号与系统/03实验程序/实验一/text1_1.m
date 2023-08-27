@@ -1,0 +1,17 @@
+t=linspace(-10,10,1000);
+f=t;
+subplot(2,2,1),plot(t,f);
+title('f(t)=t');
+b0=0;%信号发生突变的时刻
+ut=stepfun(f,b0);%产生单位的阶跃信号
+ff=ut.*t;
+subplot(2,2,2),plot(t,ff);
+title('f(t)=tu(t)');
+fff=ut.*(t-1);
+subplot(2,2,3),plot(t,fff);
+title('f(t)=(t-1)u(t)');
+b0=1;
+ut=stepfun(f,b0);%产生单位的阶跃信号
+ffff=ut.*(t-1);
+subplot(2,2,4),plot(t,ffff);
+title('f(t)=(t-1)u(t-1)');

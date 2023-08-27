@@ -1,0 +1,23 @@
+clc;
+clear;
+syms t;
+syms v;
+Sa_t=sin(t)/t;
+Ft=fourier(Sa_t);
+subplot(3,2,1),ezplot(Sa_t,[-10,10]);
+title('Sa(t)');
+subplot(3,2,2),ezplot(Ft,[-10,10]);
+title('Sa(t)傅里叶变换之后');
+Sa_v=sin(v)/v;
+ft=ifourier(Sa_v);
+subplot(3,2,3),ezplot(Sa_v,[-10,10]);
+title('Sa(w)');
+subplot(3,2,4),ezplot(ft,[-10,10]);
+title('Sa(w)傅里叶逆变换之后');
+Sa_v_2=sin(v-2)/(v-2);
+subplot(3,2,5),ezplot(Sa_v_2,[-10,10]);
+title('Sa(w-2)');
+ft_2=ifourier(Sa_v_2);
+subplot(3,2,6),ezplot(ft_2,[-10,10]);
+title('Sa(w-2)傅里叶逆变换之后');
+

@@ -1,0 +1,95 @@
+Version 8.1 Build 163 10/28/2008 SJ Full Version
+7
+2996
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+full_add
+# storage
+db|4_full_add.(1).cnf
+db|4_full_add.(1).cnf
+# case_insensitive
+# source_file
+full_add.bdf
+8dc8b642efa96229c9609556ef5c03
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+full_add:inst
+full_add:inst2
+full_add:inst3
+full_add:inst4
+}
+# macro_sequence
+
+# end
+# entity
+half_add
+# storage
+db|4_full_add.(2).cnf
+db|4_full_add.(2).cnf
+# case_insensitive
+# source_file
+half_add.bdf
+1af876519149bfcde54d952cda7e91a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+full_add:inst|half_add:inst1
+full_add:inst|half_add:inst
+full_add:inst2|half_add:inst1
+full_add:inst2|half_add:inst
+full_add:inst3|half_add:inst1
+full_add:inst3|half_add:inst
+full_add:inst4|half_add:inst1
+full_add:inst4|half_add:inst
+}
+# macro_sequence
+
+# end
+# entity
+4_full_add
+# storage
+db|4_full_add.(0).cnf
+db|4_full_add.(0).cnf
+# case_insensitive
+# source_file
+4_full_add.bdf
+eb25c71bbceae024306abf8cabf72
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

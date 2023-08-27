@@ -1,0 +1,1824 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "05/25/2023 19:19:40"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    FFT
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module FFT_vlg_sample_tst(
+	clk,
+	data_in_en,
+	rst_n,
+	sampler_tx
+);
+input  clk;
+input  data_in_en;
+input  rst_n;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(clk or data_in_en or rst_n)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module FFT_vlg_check_tst (
+	data_out_en,
+	fft_data_out_im0,
+	fft_data_out_im1,
+	fft_data_out_im2,
+	fft_data_out_im3,
+	fft_data_out_re0,
+	fft_data_out_re1,
+	fft_data_out_re2,
+	fft_data_out_re3,
+	ifft_data_out_im0,
+	ifft_data_out_im1,
+	ifft_data_out_im2,
+	ifft_data_out_im3,
+	ifft_data_out_re0,
+	ifft_data_out_re1,
+	ifft_data_out_re2,
+	ifft_data_out_re3,
+	sampler_rx
+);
+input  data_out_en;
+input [4:0] fft_data_out_im0;
+input [4:0] fft_data_out_im1;
+input [4:0] fft_data_out_im2;
+input [4:0] fft_data_out_im3;
+input [4:0] fft_data_out_re0;
+input [4:0] fft_data_out_re1;
+input [4:0] fft_data_out_re2;
+input [4:0] fft_data_out_re3;
+input [4:0] ifft_data_out_im0;
+input [4:0] ifft_data_out_im1;
+input [4:0] ifft_data_out_im2;
+input [4:0] ifft_data_out_im3;
+input [4:0] ifft_data_out_re0;
+input [4:0] ifft_data_out_re1;
+input [4:0] ifft_data_out_re2;
+input [4:0] ifft_data_out_re3;
+input sampler_rx;
+
+reg  data_out_en_expected;
+reg [4:0] fft_data_out_im0_expected;
+reg [4:0] fft_data_out_im1_expected;
+reg [4:0] fft_data_out_im2_expected;
+reg [4:0] fft_data_out_im3_expected;
+reg [4:0] fft_data_out_re0_expected;
+reg [4:0] fft_data_out_re1_expected;
+reg [4:0] fft_data_out_re2_expected;
+reg [4:0] fft_data_out_re3_expected;
+reg [4:0] ifft_data_out_im0_expected;
+reg [4:0] ifft_data_out_im1_expected;
+reg [4:0] ifft_data_out_im2_expected;
+reg [4:0] ifft_data_out_im3_expected;
+reg [4:0] ifft_data_out_re0_expected;
+reg [4:0] ifft_data_out_re1_expected;
+reg [4:0] ifft_data_out_re2_expected;
+reg [4:0] ifft_data_out_re3_expected;
+
+reg  data_out_en_prev;
+reg [4:0] fft_data_out_im0_prev;
+reg [4:0] fft_data_out_im1_prev;
+reg [4:0] fft_data_out_im2_prev;
+reg [4:0] fft_data_out_im3_prev;
+reg [4:0] fft_data_out_re0_prev;
+reg [4:0] fft_data_out_re1_prev;
+reg [4:0] fft_data_out_re2_prev;
+reg [4:0] fft_data_out_re3_prev;
+reg [4:0] ifft_data_out_im0_prev;
+reg [4:0] ifft_data_out_im1_prev;
+reg [4:0] ifft_data_out_im2_prev;
+reg [4:0] ifft_data_out_im3_prev;
+reg [4:0] ifft_data_out_re0_prev;
+reg [4:0] ifft_data_out_re1_prev;
+reg [4:0] ifft_data_out_re2_prev;
+reg [4:0] ifft_data_out_re3_prev;
+
+reg  data_out_en_expected_prev;
+reg [4:0] fft_data_out_im0_expected_prev;
+reg [4:0] fft_data_out_im1_expected_prev;
+reg [4:0] fft_data_out_im2_expected_prev;
+reg [4:0] fft_data_out_im3_expected_prev;
+reg [4:0] fft_data_out_re0_expected_prev;
+reg [4:0] fft_data_out_re1_expected_prev;
+reg [4:0] fft_data_out_re2_expected_prev;
+reg [4:0] fft_data_out_re3_expected_prev;
+reg [4:0] ifft_data_out_im0_expected_prev;
+reg [4:0] ifft_data_out_im1_expected_prev;
+reg [4:0] ifft_data_out_im2_expected_prev;
+reg [4:0] ifft_data_out_im3_expected_prev;
+reg [4:0] ifft_data_out_re0_expected_prev;
+reg [4:0] ifft_data_out_re1_expected_prev;
+reg [4:0] ifft_data_out_re2_expected_prev;
+reg [4:0] ifft_data_out_re3_expected_prev;
+
+reg  last_data_out_en_exp;
+reg [4:0] last_fft_data_out_im0_exp;
+reg [4:0] last_fft_data_out_im1_exp;
+reg [4:0] last_fft_data_out_im2_exp;
+reg [4:0] last_fft_data_out_im3_exp;
+reg [4:0] last_fft_data_out_re0_exp;
+reg [4:0] last_fft_data_out_re1_exp;
+reg [4:0] last_fft_data_out_re2_exp;
+reg [4:0] last_fft_data_out_re3_exp;
+reg [4:0] last_ifft_data_out_im0_exp;
+reg [4:0] last_ifft_data_out_im1_exp;
+reg [4:0] last_ifft_data_out_im2_exp;
+reg [4:0] last_ifft_data_out_im3_exp;
+reg [4:0] last_ifft_data_out_re0_exp;
+reg [4:0] last_ifft_data_out_re1_exp;
+reg [4:0] last_ifft_data_out_re2_exp;
+reg [4:0] last_ifft_data_out_re3_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:17] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 17'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	data_out_en_prev = data_out_en;
+	fft_data_out_im0_prev = fft_data_out_im0;
+	fft_data_out_im1_prev = fft_data_out_im1;
+	fft_data_out_im2_prev = fft_data_out_im2;
+	fft_data_out_im3_prev = fft_data_out_im3;
+	fft_data_out_re0_prev = fft_data_out_re0;
+	fft_data_out_re1_prev = fft_data_out_re1;
+	fft_data_out_re2_prev = fft_data_out_re2;
+	fft_data_out_re3_prev = fft_data_out_re3;
+	ifft_data_out_im0_prev = ifft_data_out_im0;
+	ifft_data_out_im1_prev = ifft_data_out_im1;
+	ifft_data_out_im2_prev = ifft_data_out_im2;
+	ifft_data_out_im3_prev = ifft_data_out_im3;
+	ifft_data_out_re0_prev = ifft_data_out_re0;
+	ifft_data_out_re1_prev = ifft_data_out_re1;
+	ifft_data_out_re2_prev = ifft_data_out_re2;
+	ifft_data_out_re3_prev = ifft_data_out_re3;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	data_out_en_expected_prev = data_out_en_expected;
+	fft_data_out_im0_expected_prev = fft_data_out_im0_expected;
+	fft_data_out_im1_expected_prev = fft_data_out_im1_expected;
+	fft_data_out_im2_expected_prev = fft_data_out_im2_expected;
+	fft_data_out_im3_expected_prev = fft_data_out_im3_expected;
+	fft_data_out_re0_expected_prev = fft_data_out_re0_expected;
+	fft_data_out_re1_expected_prev = fft_data_out_re1_expected;
+	fft_data_out_re2_expected_prev = fft_data_out_re2_expected;
+	fft_data_out_re3_expected_prev = fft_data_out_re3_expected;
+	ifft_data_out_im0_expected_prev = ifft_data_out_im0_expected;
+	ifft_data_out_im1_expected_prev = ifft_data_out_im1_expected;
+	ifft_data_out_im2_expected_prev = ifft_data_out_im2_expected;
+	ifft_data_out_im3_expected_prev = ifft_data_out_im3_expected;
+	ifft_data_out_re0_expected_prev = ifft_data_out_re0_expected;
+	ifft_data_out_re1_expected_prev = ifft_data_out_re1_expected;
+	ifft_data_out_re2_expected_prev = ifft_data_out_re2_expected;
+	ifft_data_out_re3_expected_prev = ifft_data_out_re3_expected;
+end
+
+
+
+// expected data_out_en
+initial
+begin
+	data_out_en_expected = 1'b0;
+end 
+// expected fft_data_out_im0[ 4 ]
+initial
+begin
+	fft_data_out_im0_expected[4] = 1'bX;
+end 
+// expected fft_data_out_im0[ 3 ]
+initial
+begin
+	fft_data_out_im0_expected[3] = 1'bX;
+end 
+// expected fft_data_out_im0[ 2 ]
+initial
+begin
+	fft_data_out_im0_expected[2] = 1'bX;
+end 
+// expected fft_data_out_im0[ 1 ]
+initial
+begin
+	fft_data_out_im0_expected[1] = 1'bX;
+end 
+// expected fft_data_out_im0[ 0 ]
+initial
+begin
+	fft_data_out_im0_expected[0] = 1'bX;
+end 
+// expected fft_data_out_im1[ 4 ]
+initial
+begin
+	fft_data_out_im1_expected[4] = 1'bX;
+end 
+// expected fft_data_out_im1[ 3 ]
+initial
+begin
+	fft_data_out_im1_expected[3] = 1'bX;
+end 
+// expected fft_data_out_im1[ 2 ]
+initial
+begin
+	fft_data_out_im1_expected[2] = 1'bX;
+end 
+// expected fft_data_out_im1[ 1 ]
+initial
+begin
+	fft_data_out_im1_expected[1] = 1'bX;
+end 
+// expected fft_data_out_im1[ 0 ]
+initial
+begin
+	fft_data_out_im1_expected[0] = 1'bX;
+end 
+// expected fft_data_out_im2[ 4 ]
+initial
+begin
+	fft_data_out_im2_expected[4] = 1'bX;
+end 
+// expected fft_data_out_im2[ 3 ]
+initial
+begin
+	fft_data_out_im2_expected[3] = 1'bX;
+end 
+// expected fft_data_out_im2[ 2 ]
+initial
+begin
+	fft_data_out_im2_expected[2] = 1'bX;
+end 
+// expected fft_data_out_im2[ 1 ]
+initial
+begin
+	fft_data_out_im2_expected[1] = 1'bX;
+end 
+// expected fft_data_out_im2[ 0 ]
+initial
+begin
+	fft_data_out_im2_expected[0] = 1'bX;
+end 
+// expected fft_data_out_im3[ 4 ]
+initial
+begin
+	fft_data_out_im3_expected[4] = 1'bX;
+end 
+// expected fft_data_out_im3[ 3 ]
+initial
+begin
+	fft_data_out_im3_expected[3] = 1'bX;
+end 
+// expected fft_data_out_im3[ 2 ]
+initial
+begin
+	fft_data_out_im3_expected[2] = 1'bX;
+end 
+// expected fft_data_out_im3[ 1 ]
+initial
+begin
+	fft_data_out_im3_expected[1] = 1'bX;
+end 
+// expected fft_data_out_im3[ 0 ]
+initial
+begin
+	fft_data_out_im3_expected[0] = 1'bX;
+end 
+// expected fft_data_out_re0[ 4 ]
+initial
+begin
+	fft_data_out_re0_expected[4] = 1'bX;
+end 
+// expected fft_data_out_re0[ 3 ]
+initial
+begin
+	fft_data_out_re0_expected[3] = 1'bX;
+end 
+// expected fft_data_out_re0[ 2 ]
+initial
+begin
+	fft_data_out_re0_expected[2] = 1'bX;
+end 
+// expected fft_data_out_re0[ 1 ]
+initial
+begin
+	fft_data_out_re0_expected[1] = 1'bX;
+end 
+// expected fft_data_out_re0[ 0 ]
+initial
+begin
+	fft_data_out_re0_expected[0] = 1'bX;
+end 
+// expected fft_data_out_re1[ 4 ]
+initial
+begin
+	fft_data_out_re1_expected[4] = 1'bX;
+end 
+// expected fft_data_out_re1[ 3 ]
+initial
+begin
+	fft_data_out_re1_expected[3] = 1'bX;
+end 
+// expected fft_data_out_re1[ 2 ]
+initial
+begin
+	fft_data_out_re1_expected[2] = 1'bX;
+end 
+// expected fft_data_out_re1[ 1 ]
+initial
+begin
+	fft_data_out_re1_expected[1] = 1'bX;
+end 
+// expected fft_data_out_re1[ 0 ]
+initial
+begin
+	fft_data_out_re1_expected[0] = 1'bX;
+end 
+// expected fft_data_out_re2[ 4 ]
+initial
+begin
+	fft_data_out_re2_expected[4] = 1'bX;
+end 
+// expected fft_data_out_re2[ 3 ]
+initial
+begin
+	fft_data_out_re2_expected[3] = 1'bX;
+end 
+// expected fft_data_out_re2[ 2 ]
+initial
+begin
+	fft_data_out_re2_expected[2] = 1'bX;
+end 
+// expected fft_data_out_re2[ 1 ]
+initial
+begin
+	fft_data_out_re2_expected[1] = 1'bX;
+end 
+// expected fft_data_out_re2[ 0 ]
+initial
+begin
+	fft_data_out_re2_expected[0] = 1'bX;
+end 
+// expected fft_data_out_re3[ 4 ]
+initial
+begin
+	fft_data_out_re3_expected[4] = 1'bX;
+end 
+// expected fft_data_out_re3[ 3 ]
+initial
+begin
+	fft_data_out_re3_expected[3] = 1'bX;
+end 
+// expected fft_data_out_re3[ 2 ]
+initial
+begin
+	fft_data_out_re3_expected[2] = 1'bX;
+end 
+// expected fft_data_out_re3[ 1 ]
+initial
+begin
+	fft_data_out_re3_expected[1] = 1'bX;
+end 
+// expected fft_data_out_re3[ 0 ]
+initial
+begin
+	fft_data_out_re3_expected[0] = 1'bX;
+end 
+// expected ifft_data_out_im0[ 4 ]
+initial
+begin
+	ifft_data_out_im0_expected[4] = 1'bX;
+end 
+// expected ifft_data_out_im0[ 3 ]
+initial
+begin
+	ifft_data_out_im0_expected[3] = 1'bX;
+end 
+// expected ifft_data_out_im0[ 2 ]
+initial
+begin
+	ifft_data_out_im0_expected[2] = 1'bX;
+end 
+// expected ifft_data_out_im0[ 1 ]
+initial
+begin
+	ifft_data_out_im0_expected[1] = 1'bX;
+end 
+// expected ifft_data_out_im0[ 0 ]
+initial
+begin
+	ifft_data_out_im0_expected[0] = 1'bX;
+end 
+// expected ifft_data_out_im1[ 4 ]
+initial
+begin
+	ifft_data_out_im1_expected[4] = 1'bX;
+end 
+// expected ifft_data_out_im1[ 3 ]
+initial
+begin
+	ifft_data_out_im1_expected[3] = 1'bX;
+end 
+// expected ifft_data_out_im1[ 2 ]
+initial
+begin
+	ifft_data_out_im1_expected[2] = 1'bX;
+end 
+// expected ifft_data_out_im1[ 1 ]
+initial
+begin
+	ifft_data_out_im1_expected[1] = 1'bX;
+end 
+// expected ifft_data_out_im1[ 0 ]
+initial
+begin
+	ifft_data_out_im1_expected[0] = 1'bX;
+end 
+// expected ifft_data_out_im2[ 4 ]
+initial
+begin
+	ifft_data_out_im2_expected[4] = 1'bX;
+end 
+// expected ifft_data_out_im2[ 3 ]
+initial
+begin
+	ifft_data_out_im2_expected[3] = 1'bX;
+end 
+// expected ifft_data_out_im2[ 2 ]
+initial
+begin
+	ifft_data_out_im2_expected[2] = 1'bX;
+end 
+// expected ifft_data_out_im2[ 1 ]
+initial
+begin
+	ifft_data_out_im2_expected[1] = 1'bX;
+end 
+// expected ifft_data_out_im2[ 0 ]
+initial
+begin
+	ifft_data_out_im2_expected[0] = 1'bX;
+end 
+// expected ifft_data_out_im3[ 4 ]
+initial
+begin
+	ifft_data_out_im3_expected[4] = 1'bX;
+end 
+// expected ifft_data_out_im3[ 3 ]
+initial
+begin
+	ifft_data_out_im3_expected[3] = 1'bX;
+end 
+// expected ifft_data_out_im3[ 2 ]
+initial
+begin
+	ifft_data_out_im3_expected[2] = 1'bX;
+end 
+// expected ifft_data_out_im3[ 1 ]
+initial
+begin
+	ifft_data_out_im3_expected[1] = 1'bX;
+end 
+// expected ifft_data_out_im3[ 0 ]
+initial
+begin
+	ifft_data_out_im3_expected[0] = 1'bX;
+end 
+// expected ifft_data_out_re0[ 4 ]
+initial
+begin
+	ifft_data_out_re0_expected[4] = 1'bX;
+end 
+// expected ifft_data_out_re0[ 3 ]
+initial
+begin
+	ifft_data_out_re0_expected[3] = 1'bX;
+end 
+// expected ifft_data_out_re0[ 2 ]
+initial
+begin
+	ifft_data_out_re0_expected[2] = 1'bX;
+end 
+// expected ifft_data_out_re0[ 1 ]
+initial
+begin
+	ifft_data_out_re0_expected[1] = 1'bX;
+end 
+// expected ifft_data_out_re0[ 0 ]
+initial
+begin
+	ifft_data_out_re0_expected[0] = 1'bX;
+end 
+// expected ifft_data_out_re1[ 4 ]
+initial
+begin
+	ifft_data_out_re1_expected[4] = 1'bX;
+end 
+// expected ifft_data_out_re1[ 3 ]
+initial
+begin
+	ifft_data_out_re1_expected[3] = 1'bX;
+end 
+// expected ifft_data_out_re1[ 2 ]
+initial
+begin
+	ifft_data_out_re1_expected[2] = 1'bX;
+end 
+// expected ifft_data_out_re1[ 1 ]
+initial
+begin
+	ifft_data_out_re1_expected[1] = 1'bX;
+end 
+// expected ifft_data_out_re1[ 0 ]
+initial
+begin
+	ifft_data_out_re1_expected[0] = 1'bX;
+end 
+// expected ifft_data_out_re2[ 4 ]
+initial
+begin
+	ifft_data_out_re2_expected[4] = 1'bX;
+end 
+// expected ifft_data_out_re2[ 3 ]
+initial
+begin
+	ifft_data_out_re2_expected[3] = 1'bX;
+end 
+// expected ifft_data_out_re2[ 2 ]
+initial
+begin
+	ifft_data_out_re2_expected[2] = 1'bX;
+end 
+// expected ifft_data_out_re2[ 1 ]
+initial
+begin
+	ifft_data_out_re2_expected[1] = 1'bX;
+end 
+// expected ifft_data_out_re2[ 0 ]
+initial
+begin
+	ifft_data_out_re2_expected[0] = 1'bX;
+end 
+// expected ifft_data_out_re3[ 4 ]
+initial
+begin
+	ifft_data_out_re3_expected[4] = 1'bX;
+end 
+// expected ifft_data_out_re3[ 3 ]
+initial
+begin
+	ifft_data_out_re3_expected[3] = 1'bX;
+end 
+// expected ifft_data_out_re3[ 2 ]
+initial
+begin
+	ifft_data_out_re3_expected[2] = 1'bX;
+end 
+// expected ifft_data_out_re3[ 1 ]
+initial
+begin
+	ifft_data_out_re3_expected[1] = 1'bX;
+end 
+// expected ifft_data_out_re3[ 0 ]
+initial
+begin
+	ifft_data_out_re3_expected[0] = 1'bX;
+end 
+// generate trigger
+always @(data_out_en_expected or data_out_en or fft_data_out_im0_expected or fft_data_out_im0 or fft_data_out_im1_expected or fft_data_out_im1 or fft_data_out_im2_expected or fft_data_out_im2 or fft_data_out_im3_expected or fft_data_out_im3 or fft_data_out_re0_expected or fft_data_out_re0 or fft_data_out_re1_expected or fft_data_out_re1 or fft_data_out_re2_expected or fft_data_out_re2 or fft_data_out_re3_expected or fft_data_out_re3 or ifft_data_out_im0_expected or ifft_data_out_im0 or ifft_data_out_im1_expected or ifft_data_out_im1 or ifft_data_out_im2_expected or ifft_data_out_im2 or ifft_data_out_im3_expected or ifft_data_out_im3 or ifft_data_out_re0_expected or ifft_data_out_re0 or ifft_data_out_re1_expected or ifft_data_out_re1 or ifft_data_out_re2_expected or ifft_data_out_re2 or ifft_data_out_re3_expected or ifft_data_out_re3)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected data_out_en = %b | expected fft_data_out_im0 = %b | expected fft_data_out_im1 = %b | expected fft_data_out_im2 = %b | expected fft_data_out_im3 = %b | expected fft_data_out_re0 = %b | expected fft_data_out_re1 = %b | expected fft_data_out_re2 = %b | expected fft_data_out_re3 = %b | expected ifft_data_out_im0 = %b | expected ifft_data_out_im1 = %b | expected ifft_data_out_im2 = %b | expected ifft_data_out_im3 = %b | expected ifft_data_out_re0 = %b | expected ifft_data_out_re1 = %b | expected ifft_data_out_re2 = %b | expected ifft_data_out_re3 = %b | ",data_out_en_expected_prev,fft_data_out_im0_expected_prev,fft_data_out_im1_expected_prev,fft_data_out_im2_expected_prev,fft_data_out_im3_expected_prev,fft_data_out_re0_expected_prev,fft_data_out_re1_expected_prev,fft_data_out_re2_expected_prev,fft_data_out_re3_expected_prev,ifft_data_out_im0_expected_prev,ifft_data_out_im1_expected_prev,ifft_data_out_im2_expected_prev,ifft_data_out_im3_expected_prev,ifft_data_out_re0_expected_prev,ifft_data_out_re1_expected_prev,ifft_data_out_re2_expected_prev,ifft_data_out_re3_expected_prev);
+	$display("| real data_out_en = %b | real fft_data_out_im0 = %b | real fft_data_out_im1 = %b | real fft_data_out_im2 = %b | real fft_data_out_im3 = %b | real fft_data_out_re0 = %b | real fft_data_out_re1 = %b | real fft_data_out_re2 = %b | real fft_data_out_re3 = %b | real ifft_data_out_im0 = %b | real ifft_data_out_im1 = %b | real ifft_data_out_im2 = %b | real ifft_data_out_im3 = %b | real ifft_data_out_re0 = %b | real ifft_data_out_re1 = %b | real ifft_data_out_re2 = %b | real ifft_data_out_re3 = %b | ",data_out_en_prev,fft_data_out_im0_prev,fft_data_out_im1_prev,fft_data_out_im2_prev,fft_data_out_im3_prev,fft_data_out_re0_prev,fft_data_out_re1_prev,fft_data_out_re2_prev,fft_data_out_re3_prev,ifft_data_out_im0_prev,ifft_data_out_im1_prev,ifft_data_out_im2_prev,ifft_data_out_im3_prev,ifft_data_out_re0_prev,ifft_data_out_re1_prev,ifft_data_out_re2_prev,ifft_data_out_re3_prev);
+`endif
+	if (
+		( data_out_en_expected_prev !== 1'bx ) && ( data_out_en_prev !== data_out_en_expected_prev )
+		&& ((data_out_en_expected_prev !== last_data_out_en_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port data_out_en :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", data_out_en_expected_prev);
+		$display ("     Real value = %b", data_out_en_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_data_out_en_exp = data_out_en_expected_prev;
+	end
+	if (
+		( fft_data_out_im0_expected_prev[0] !== 1'bx ) && ( fft_data_out_im0_prev[0] !== fft_data_out_im0_expected_prev[0] )
+		&& ((fft_data_out_im0_expected_prev[0] !== last_fft_data_out_im0_exp[0]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im0[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im0_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_fft_data_out_im0_exp[0] = fft_data_out_im0_expected_prev[0];
+	end
+	if (
+		( fft_data_out_im0_expected_prev[1] !== 1'bx ) && ( fft_data_out_im0_prev[1] !== fft_data_out_im0_expected_prev[1] )
+		&& ((fft_data_out_im0_expected_prev[1] !== last_fft_data_out_im0_exp[1]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im0[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im0_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_fft_data_out_im0_exp[1] = fft_data_out_im0_expected_prev[1];
+	end
+	if (
+		( fft_data_out_im0_expected_prev[2] !== 1'bx ) && ( fft_data_out_im0_prev[2] !== fft_data_out_im0_expected_prev[2] )
+		&& ((fft_data_out_im0_expected_prev[2] !== last_fft_data_out_im0_exp[2]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im0[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im0_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_fft_data_out_im0_exp[2] = fft_data_out_im0_expected_prev[2];
+	end
+	if (
+		( fft_data_out_im0_expected_prev[3] !== 1'bx ) && ( fft_data_out_im0_prev[3] !== fft_data_out_im0_expected_prev[3] )
+		&& ((fft_data_out_im0_expected_prev[3] !== last_fft_data_out_im0_exp[3]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im0[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im0_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_fft_data_out_im0_exp[3] = fft_data_out_im0_expected_prev[3];
+	end
+	if (
+		( fft_data_out_im0_expected_prev[4] !== 1'bx ) && ( fft_data_out_im0_prev[4] !== fft_data_out_im0_expected_prev[4] )
+		&& ((fft_data_out_im0_expected_prev[4] !== last_fft_data_out_im0_exp[4]) ||
+			on_first_change[2])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im0[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im0_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[2] = 1'b0;
+		last_fft_data_out_im0_exp[4] = fft_data_out_im0_expected_prev[4];
+	end
+	if (
+		( fft_data_out_im1_expected_prev[0] !== 1'bx ) && ( fft_data_out_im1_prev[0] !== fft_data_out_im1_expected_prev[0] )
+		&& ((fft_data_out_im1_expected_prev[0] !== last_fft_data_out_im1_exp[0]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im1[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im1_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_fft_data_out_im1_exp[0] = fft_data_out_im1_expected_prev[0];
+	end
+	if (
+		( fft_data_out_im1_expected_prev[1] !== 1'bx ) && ( fft_data_out_im1_prev[1] !== fft_data_out_im1_expected_prev[1] )
+		&& ((fft_data_out_im1_expected_prev[1] !== last_fft_data_out_im1_exp[1]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im1[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im1_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_fft_data_out_im1_exp[1] = fft_data_out_im1_expected_prev[1];
+	end
+	if (
+		( fft_data_out_im1_expected_prev[2] !== 1'bx ) && ( fft_data_out_im1_prev[2] !== fft_data_out_im1_expected_prev[2] )
+		&& ((fft_data_out_im1_expected_prev[2] !== last_fft_data_out_im1_exp[2]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im1[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im1_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_fft_data_out_im1_exp[2] = fft_data_out_im1_expected_prev[2];
+	end
+	if (
+		( fft_data_out_im1_expected_prev[3] !== 1'bx ) && ( fft_data_out_im1_prev[3] !== fft_data_out_im1_expected_prev[3] )
+		&& ((fft_data_out_im1_expected_prev[3] !== last_fft_data_out_im1_exp[3]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im1[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im1_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_fft_data_out_im1_exp[3] = fft_data_out_im1_expected_prev[3];
+	end
+	if (
+		( fft_data_out_im1_expected_prev[4] !== 1'bx ) && ( fft_data_out_im1_prev[4] !== fft_data_out_im1_expected_prev[4] )
+		&& ((fft_data_out_im1_expected_prev[4] !== last_fft_data_out_im1_exp[4]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im1[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im1_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_fft_data_out_im1_exp[4] = fft_data_out_im1_expected_prev[4];
+	end
+	if (
+		( fft_data_out_im2_expected_prev[0] !== 1'bx ) && ( fft_data_out_im2_prev[0] !== fft_data_out_im2_expected_prev[0] )
+		&& ((fft_data_out_im2_expected_prev[0] !== last_fft_data_out_im2_exp[0]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im2[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im2_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_fft_data_out_im2_exp[0] = fft_data_out_im2_expected_prev[0];
+	end
+	if (
+		( fft_data_out_im2_expected_prev[1] !== 1'bx ) && ( fft_data_out_im2_prev[1] !== fft_data_out_im2_expected_prev[1] )
+		&& ((fft_data_out_im2_expected_prev[1] !== last_fft_data_out_im2_exp[1]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im2[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im2_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_fft_data_out_im2_exp[1] = fft_data_out_im2_expected_prev[1];
+	end
+	if (
+		( fft_data_out_im2_expected_prev[2] !== 1'bx ) && ( fft_data_out_im2_prev[2] !== fft_data_out_im2_expected_prev[2] )
+		&& ((fft_data_out_im2_expected_prev[2] !== last_fft_data_out_im2_exp[2]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im2[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im2_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_fft_data_out_im2_exp[2] = fft_data_out_im2_expected_prev[2];
+	end
+	if (
+		( fft_data_out_im2_expected_prev[3] !== 1'bx ) && ( fft_data_out_im2_prev[3] !== fft_data_out_im2_expected_prev[3] )
+		&& ((fft_data_out_im2_expected_prev[3] !== last_fft_data_out_im2_exp[3]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im2[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im2_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_fft_data_out_im2_exp[3] = fft_data_out_im2_expected_prev[3];
+	end
+	if (
+		( fft_data_out_im2_expected_prev[4] !== 1'bx ) && ( fft_data_out_im2_prev[4] !== fft_data_out_im2_expected_prev[4] )
+		&& ((fft_data_out_im2_expected_prev[4] !== last_fft_data_out_im2_exp[4]) ||
+			on_first_change[4])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im2[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im2_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[4] = 1'b0;
+		last_fft_data_out_im2_exp[4] = fft_data_out_im2_expected_prev[4];
+	end
+	if (
+		( fft_data_out_im3_expected_prev[0] !== 1'bx ) && ( fft_data_out_im3_prev[0] !== fft_data_out_im3_expected_prev[0] )
+		&& ((fft_data_out_im3_expected_prev[0] !== last_fft_data_out_im3_exp[0]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im3[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im3_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_fft_data_out_im3_exp[0] = fft_data_out_im3_expected_prev[0];
+	end
+	if (
+		( fft_data_out_im3_expected_prev[1] !== 1'bx ) && ( fft_data_out_im3_prev[1] !== fft_data_out_im3_expected_prev[1] )
+		&& ((fft_data_out_im3_expected_prev[1] !== last_fft_data_out_im3_exp[1]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im3[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im3_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_fft_data_out_im3_exp[1] = fft_data_out_im3_expected_prev[1];
+	end
+	if (
+		( fft_data_out_im3_expected_prev[2] !== 1'bx ) && ( fft_data_out_im3_prev[2] !== fft_data_out_im3_expected_prev[2] )
+		&& ((fft_data_out_im3_expected_prev[2] !== last_fft_data_out_im3_exp[2]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im3[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im3_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_fft_data_out_im3_exp[2] = fft_data_out_im3_expected_prev[2];
+	end
+	if (
+		( fft_data_out_im3_expected_prev[3] !== 1'bx ) && ( fft_data_out_im3_prev[3] !== fft_data_out_im3_expected_prev[3] )
+		&& ((fft_data_out_im3_expected_prev[3] !== last_fft_data_out_im3_exp[3]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im3[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im3_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_fft_data_out_im3_exp[3] = fft_data_out_im3_expected_prev[3];
+	end
+	if (
+		( fft_data_out_im3_expected_prev[4] !== 1'bx ) && ( fft_data_out_im3_prev[4] !== fft_data_out_im3_expected_prev[4] )
+		&& ((fft_data_out_im3_expected_prev[4] !== last_fft_data_out_im3_exp[4]) ||
+			on_first_change[5])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_im3[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_im3_expected_prev);
+		$display ("     Real value = %b", fft_data_out_im3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[5] = 1'b0;
+		last_fft_data_out_im3_exp[4] = fft_data_out_im3_expected_prev[4];
+	end
+	if (
+		( fft_data_out_re0_expected_prev[0] !== 1'bx ) && ( fft_data_out_re0_prev[0] !== fft_data_out_re0_expected_prev[0] )
+		&& ((fft_data_out_re0_expected_prev[0] !== last_fft_data_out_re0_exp[0]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re0[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re0_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_fft_data_out_re0_exp[0] = fft_data_out_re0_expected_prev[0];
+	end
+	if (
+		( fft_data_out_re0_expected_prev[1] !== 1'bx ) && ( fft_data_out_re0_prev[1] !== fft_data_out_re0_expected_prev[1] )
+		&& ((fft_data_out_re0_expected_prev[1] !== last_fft_data_out_re0_exp[1]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re0[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re0_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_fft_data_out_re0_exp[1] = fft_data_out_re0_expected_prev[1];
+	end
+	if (
+		( fft_data_out_re0_expected_prev[2] !== 1'bx ) && ( fft_data_out_re0_prev[2] !== fft_data_out_re0_expected_prev[2] )
+		&& ((fft_data_out_re0_expected_prev[2] !== last_fft_data_out_re0_exp[2]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re0[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re0_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_fft_data_out_re0_exp[2] = fft_data_out_re0_expected_prev[2];
+	end
+	if (
+		( fft_data_out_re0_expected_prev[3] !== 1'bx ) && ( fft_data_out_re0_prev[3] !== fft_data_out_re0_expected_prev[3] )
+		&& ((fft_data_out_re0_expected_prev[3] !== last_fft_data_out_re0_exp[3]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re0[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re0_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_fft_data_out_re0_exp[3] = fft_data_out_re0_expected_prev[3];
+	end
+	if (
+		( fft_data_out_re0_expected_prev[4] !== 1'bx ) && ( fft_data_out_re0_prev[4] !== fft_data_out_re0_expected_prev[4] )
+		&& ((fft_data_out_re0_expected_prev[4] !== last_fft_data_out_re0_exp[4]) ||
+			on_first_change[6])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re0[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re0_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[6] = 1'b0;
+		last_fft_data_out_re0_exp[4] = fft_data_out_re0_expected_prev[4];
+	end
+	if (
+		( fft_data_out_re1_expected_prev[0] !== 1'bx ) && ( fft_data_out_re1_prev[0] !== fft_data_out_re1_expected_prev[0] )
+		&& ((fft_data_out_re1_expected_prev[0] !== last_fft_data_out_re1_exp[0]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re1[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re1_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_fft_data_out_re1_exp[0] = fft_data_out_re1_expected_prev[0];
+	end
+	if (
+		( fft_data_out_re1_expected_prev[1] !== 1'bx ) && ( fft_data_out_re1_prev[1] !== fft_data_out_re1_expected_prev[1] )
+		&& ((fft_data_out_re1_expected_prev[1] !== last_fft_data_out_re1_exp[1]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re1[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re1_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_fft_data_out_re1_exp[1] = fft_data_out_re1_expected_prev[1];
+	end
+	if (
+		( fft_data_out_re1_expected_prev[2] !== 1'bx ) && ( fft_data_out_re1_prev[2] !== fft_data_out_re1_expected_prev[2] )
+		&& ((fft_data_out_re1_expected_prev[2] !== last_fft_data_out_re1_exp[2]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re1[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re1_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_fft_data_out_re1_exp[2] = fft_data_out_re1_expected_prev[2];
+	end
+	if (
+		( fft_data_out_re1_expected_prev[3] !== 1'bx ) && ( fft_data_out_re1_prev[3] !== fft_data_out_re1_expected_prev[3] )
+		&& ((fft_data_out_re1_expected_prev[3] !== last_fft_data_out_re1_exp[3]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re1[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re1_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_fft_data_out_re1_exp[3] = fft_data_out_re1_expected_prev[3];
+	end
+	if (
+		( fft_data_out_re1_expected_prev[4] !== 1'bx ) && ( fft_data_out_re1_prev[4] !== fft_data_out_re1_expected_prev[4] )
+		&& ((fft_data_out_re1_expected_prev[4] !== last_fft_data_out_re1_exp[4]) ||
+			on_first_change[7])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re1[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re1_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[7] = 1'b0;
+		last_fft_data_out_re1_exp[4] = fft_data_out_re1_expected_prev[4];
+	end
+	if (
+		( fft_data_out_re2_expected_prev[0] !== 1'bx ) && ( fft_data_out_re2_prev[0] !== fft_data_out_re2_expected_prev[0] )
+		&& ((fft_data_out_re2_expected_prev[0] !== last_fft_data_out_re2_exp[0]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re2[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re2_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_fft_data_out_re2_exp[0] = fft_data_out_re2_expected_prev[0];
+	end
+	if (
+		( fft_data_out_re2_expected_prev[1] !== 1'bx ) && ( fft_data_out_re2_prev[1] !== fft_data_out_re2_expected_prev[1] )
+		&& ((fft_data_out_re2_expected_prev[1] !== last_fft_data_out_re2_exp[1]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re2[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re2_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_fft_data_out_re2_exp[1] = fft_data_out_re2_expected_prev[1];
+	end
+	if (
+		( fft_data_out_re2_expected_prev[2] !== 1'bx ) && ( fft_data_out_re2_prev[2] !== fft_data_out_re2_expected_prev[2] )
+		&& ((fft_data_out_re2_expected_prev[2] !== last_fft_data_out_re2_exp[2]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re2[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re2_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_fft_data_out_re2_exp[2] = fft_data_out_re2_expected_prev[2];
+	end
+	if (
+		( fft_data_out_re2_expected_prev[3] !== 1'bx ) && ( fft_data_out_re2_prev[3] !== fft_data_out_re2_expected_prev[3] )
+		&& ((fft_data_out_re2_expected_prev[3] !== last_fft_data_out_re2_exp[3]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re2[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re2_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_fft_data_out_re2_exp[3] = fft_data_out_re2_expected_prev[3];
+	end
+	if (
+		( fft_data_out_re2_expected_prev[4] !== 1'bx ) && ( fft_data_out_re2_prev[4] !== fft_data_out_re2_expected_prev[4] )
+		&& ((fft_data_out_re2_expected_prev[4] !== last_fft_data_out_re2_exp[4]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re2[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re2_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_fft_data_out_re2_exp[4] = fft_data_out_re2_expected_prev[4];
+	end
+	if (
+		( fft_data_out_re3_expected_prev[0] !== 1'bx ) && ( fft_data_out_re3_prev[0] !== fft_data_out_re3_expected_prev[0] )
+		&& ((fft_data_out_re3_expected_prev[0] !== last_fft_data_out_re3_exp[0]) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re3[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re3_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_fft_data_out_re3_exp[0] = fft_data_out_re3_expected_prev[0];
+	end
+	if (
+		( fft_data_out_re3_expected_prev[1] !== 1'bx ) && ( fft_data_out_re3_prev[1] !== fft_data_out_re3_expected_prev[1] )
+		&& ((fft_data_out_re3_expected_prev[1] !== last_fft_data_out_re3_exp[1]) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re3[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re3_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_fft_data_out_re3_exp[1] = fft_data_out_re3_expected_prev[1];
+	end
+	if (
+		( fft_data_out_re3_expected_prev[2] !== 1'bx ) && ( fft_data_out_re3_prev[2] !== fft_data_out_re3_expected_prev[2] )
+		&& ((fft_data_out_re3_expected_prev[2] !== last_fft_data_out_re3_exp[2]) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re3[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re3_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_fft_data_out_re3_exp[2] = fft_data_out_re3_expected_prev[2];
+	end
+	if (
+		( fft_data_out_re3_expected_prev[3] !== 1'bx ) && ( fft_data_out_re3_prev[3] !== fft_data_out_re3_expected_prev[3] )
+		&& ((fft_data_out_re3_expected_prev[3] !== last_fft_data_out_re3_exp[3]) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re3[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re3_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_fft_data_out_re3_exp[3] = fft_data_out_re3_expected_prev[3];
+	end
+	if (
+		( fft_data_out_re3_expected_prev[4] !== 1'bx ) && ( fft_data_out_re3_prev[4] !== fft_data_out_re3_expected_prev[4] )
+		&& ((fft_data_out_re3_expected_prev[4] !== last_fft_data_out_re3_exp[4]) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port fft_data_out_re3[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", fft_data_out_re3_expected_prev);
+		$display ("     Real value = %b", fft_data_out_re3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_fft_data_out_re3_exp[4] = fft_data_out_re3_expected_prev[4];
+	end
+	if (
+		( ifft_data_out_im0_expected_prev[0] !== 1'bx ) && ( ifft_data_out_im0_prev[0] !== ifft_data_out_im0_expected_prev[0] )
+		&& ((ifft_data_out_im0_expected_prev[0] !== last_ifft_data_out_im0_exp[0]) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im0[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im0_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_ifft_data_out_im0_exp[0] = ifft_data_out_im0_expected_prev[0];
+	end
+	if (
+		( ifft_data_out_im0_expected_prev[1] !== 1'bx ) && ( ifft_data_out_im0_prev[1] !== ifft_data_out_im0_expected_prev[1] )
+		&& ((ifft_data_out_im0_expected_prev[1] !== last_ifft_data_out_im0_exp[1]) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im0[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im0_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_ifft_data_out_im0_exp[1] = ifft_data_out_im0_expected_prev[1];
+	end
+	if (
+		( ifft_data_out_im0_expected_prev[2] !== 1'bx ) && ( ifft_data_out_im0_prev[2] !== ifft_data_out_im0_expected_prev[2] )
+		&& ((ifft_data_out_im0_expected_prev[2] !== last_ifft_data_out_im0_exp[2]) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im0[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im0_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_ifft_data_out_im0_exp[2] = ifft_data_out_im0_expected_prev[2];
+	end
+	if (
+		( ifft_data_out_im0_expected_prev[3] !== 1'bx ) && ( ifft_data_out_im0_prev[3] !== ifft_data_out_im0_expected_prev[3] )
+		&& ((ifft_data_out_im0_expected_prev[3] !== last_ifft_data_out_im0_exp[3]) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im0[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im0_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_ifft_data_out_im0_exp[3] = ifft_data_out_im0_expected_prev[3];
+	end
+	if (
+		( ifft_data_out_im0_expected_prev[4] !== 1'bx ) && ( ifft_data_out_im0_prev[4] !== ifft_data_out_im0_expected_prev[4] )
+		&& ((ifft_data_out_im0_expected_prev[4] !== last_ifft_data_out_im0_exp[4]) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im0[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im0_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_ifft_data_out_im0_exp[4] = ifft_data_out_im0_expected_prev[4];
+	end
+	if (
+		( ifft_data_out_im1_expected_prev[0] !== 1'bx ) && ( ifft_data_out_im1_prev[0] !== ifft_data_out_im1_expected_prev[0] )
+		&& ((ifft_data_out_im1_expected_prev[0] !== last_ifft_data_out_im1_exp[0]) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im1[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im1_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_ifft_data_out_im1_exp[0] = ifft_data_out_im1_expected_prev[0];
+	end
+	if (
+		( ifft_data_out_im1_expected_prev[1] !== 1'bx ) && ( ifft_data_out_im1_prev[1] !== ifft_data_out_im1_expected_prev[1] )
+		&& ((ifft_data_out_im1_expected_prev[1] !== last_ifft_data_out_im1_exp[1]) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im1[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im1_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_ifft_data_out_im1_exp[1] = ifft_data_out_im1_expected_prev[1];
+	end
+	if (
+		( ifft_data_out_im1_expected_prev[2] !== 1'bx ) && ( ifft_data_out_im1_prev[2] !== ifft_data_out_im1_expected_prev[2] )
+		&& ((ifft_data_out_im1_expected_prev[2] !== last_ifft_data_out_im1_exp[2]) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im1[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im1_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_ifft_data_out_im1_exp[2] = ifft_data_out_im1_expected_prev[2];
+	end
+	if (
+		( ifft_data_out_im1_expected_prev[3] !== 1'bx ) && ( ifft_data_out_im1_prev[3] !== ifft_data_out_im1_expected_prev[3] )
+		&& ((ifft_data_out_im1_expected_prev[3] !== last_ifft_data_out_im1_exp[3]) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im1[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im1_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_ifft_data_out_im1_exp[3] = ifft_data_out_im1_expected_prev[3];
+	end
+	if (
+		( ifft_data_out_im1_expected_prev[4] !== 1'bx ) && ( ifft_data_out_im1_prev[4] !== ifft_data_out_im1_expected_prev[4] )
+		&& ((ifft_data_out_im1_expected_prev[4] !== last_ifft_data_out_im1_exp[4]) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im1[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im1_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_ifft_data_out_im1_exp[4] = ifft_data_out_im1_expected_prev[4];
+	end
+	if (
+		( ifft_data_out_im2_expected_prev[0] !== 1'bx ) && ( ifft_data_out_im2_prev[0] !== ifft_data_out_im2_expected_prev[0] )
+		&& ((ifft_data_out_im2_expected_prev[0] !== last_ifft_data_out_im2_exp[0]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im2[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im2_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_ifft_data_out_im2_exp[0] = ifft_data_out_im2_expected_prev[0];
+	end
+	if (
+		( ifft_data_out_im2_expected_prev[1] !== 1'bx ) && ( ifft_data_out_im2_prev[1] !== ifft_data_out_im2_expected_prev[1] )
+		&& ((ifft_data_out_im2_expected_prev[1] !== last_ifft_data_out_im2_exp[1]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im2[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im2_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_ifft_data_out_im2_exp[1] = ifft_data_out_im2_expected_prev[1];
+	end
+	if (
+		( ifft_data_out_im2_expected_prev[2] !== 1'bx ) && ( ifft_data_out_im2_prev[2] !== ifft_data_out_im2_expected_prev[2] )
+		&& ((ifft_data_out_im2_expected_prev[2] !== last_ifft_data_out_im2_exp[2]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im2[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im2_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_ifft_data_out_im2_exp[2] = ifft_data_out_im2_expected_prev[2];
+	end
+	if (
+		( ifft_data_out_im2_expected_prev[3] !== 1'bx ) && ( ifft_data_out_im2_prev[3] !== ifft_data_out_im2_expected_prev[3] )
+		&& ((ifft_data_out_im2_expected_prev[3] !== last_ifft_data_out_im2_exp[3]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im2[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im2_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_ifft_data_out_im2_exp[3] = ifft_data_out_im2_expected_prev[3];
+	end
+	if (
+		( ifft_data_out_im2_expected_prev[4] !== 1'bx ) && ( ifft_data_out_im2_prev[4] !== ifft_data_out_im2_expected_prev[4] )
+		&& ((ifft_data_out_im2_expected_prev[4] !== last_ifft_data_out_im2_exp[4]) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im2[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im2_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_ifft_data_out_im2_exp[4] = ifft_data_out_im2_expected_prev[4];
+	end
+	if (
+		( ifft_data_out_im3_expected_prev[0] !== 1'bx ) && ( ifft_data_out_im3_prev[0] !== ifft_data_out_im3_expected_prev[0] )
+		&& ((ifft_data_out_im3_expected_prev[0] !== last_ifft_data_out_im3_exp[0]) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im3[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im3_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_ifft_data_out_im3_exp[0] = ifft_data_out_im3_expected_prev[0];
+	end
+	if (
+		( ifft_data_out_im3_expected_prev[1] !== 1'bx ) && ( ifft_data_out_im3_prev[1] !== ifft_data_out_im3_expected_prev[1] )
+		&& ((ifft_data_out_im3_expected_prev[1] !== last_ifft_data_out_im3_exp[1]) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im3[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im3_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_ifft_data_out_im3_exp[1] = ifft_data_out_im3_expected_prev[1];
+	end
+	if (
+		( ifft_data_out_im3_expected_prev[2] !== 1'bx ) && ( ifft_data_out_im3_prev[2] !== ifft_data_out_im3_expected_prev[2] )
+		&& ((ifft_data_out_im3_expected_prev[2] !== last_ifft_data_out_im3_exp[2]) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im3[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im3_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_ifft_data_out_im3_exp[2] = ifft_data_out_im3_expected_prev[2];
+	end
+	if (
+		( ifft_data_out_im3_expected_prev[3] !== 1'bx ) && ( ifft_data_out_im3_prev[3] !== ifft_data_out_im3_expected_prev[3] )
+		&& ((ifft_data_out_im3_expected_prev[3] !== last_ifft_data_out_im3_exp[3]) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im3[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im3_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_ifft_data_out_im3_exp[3] = ifft_data_out_im3_expected_prev[3];
+	end
+	if (
+		( ifft_data_out_im3_expected_prev[4] !== 1'bx ) && ( ifft_data_out_im3_prev[4] !== ifft_data_out_im3_expected_prev[4] )
+		&& ((ifft_data_out_im3_expected_prev[4] !== last_ifft_data_out_im3_exp[4]) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_im3[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_im3_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_im3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_ifft_data_out_im3_exp[4] = ifft_data_out_im3_expected_prev[4];
+	end
+	if (
+		( ifft_data_out_re0_expected_prev[0] !== 1'bx ) && ( ifft_data_out_re0_prev[0] !== ifft_data_out_re0_expected_prev[0] )
+		&& ((ifft_data_out_re0_expected_prev[0] !== last_ifft_data_out_re0_exp[0]) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re0[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re0_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_ifft_data_out_re0_exp[0] = ifft_data_out_re0_expected_prev[0];
+	end
+	if (
+		( ifft_data_out_re0_expected_prev[1] !== 1'bx ) && ( ifft_data_out_re0_prev[1] !== ifft_data_out_re0_expected_prev[1] )
+		&& ((ifft_data_out_re0_expected_prev[1] !== last_ifft_data_out_re0_exp[1]) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re0[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re0_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_ifft_data_out_re0_exp[1] = ifft_data_out_re0_expected_prev[1];
+	end
+	if (
+		( ifft_data_out_re0_expected_prev[2] !== 1'bx ) && ( ifft_data_out_re0_prev[2] !== ifft_data_out_re0_expected_prev[2] )
+		&& ((ifft_data_out_re0_expected_prev[2] !== last_ifft_data_out_re0_exp[2]) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re0[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re0_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_ifft_data_out_re0_exp[2] = ifft_data_out_re0_expected_prev[2];
+	end
+	if (
+		( ifft_data_out_re0_expected_prev[3] !== 1'bx ) && ( ifft_data_out_re0_prev[3] !== ifft_data_out_re0_expected_prev[3] )
+		&& ((ifft_data_out_re0_expected_prev[3] !== last_ifft_data_out_re0_exp[3]) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re0[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re0_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_ifft_data_out_re0_exp[3] = ifft_data_out_re0_expected_prev[3];
+	end
+	if (
+		( ifft_data_out_re0_expected_prev[4] !== 1'bx ) && ( ifft_data_out_re0_prev[4] !== ifft_data_out_re0_expected_prev[4] )
+		&& ((ifft_data_out_re0_expected_prev[4] !== last_ifft_data_out_re0_exp[4]) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re0[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re0_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re0_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_ifft_data_out_re0_exp[4] = ifft_data_out_re0_expected_prev[4];
+	end
+	if (
+		( ifft_data_out_re1_expected_prev[0] !== 1'bx ) && ( ifft_data_out_re1_prev[0] !== ifft_data_out_re1_expected_prev[0] )
+		&& ((ifft_data_out_re1_expected_prev[0] !== last_ifft_data_out_re1_exp[0]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re1[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re1_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_ifft_data_out_re1_exp[0] = ifft_data_out_re1_expected_prev[0];
+	end
+	if (
+		( ifft_data_out_re1_expected_prev[1] !== 1'bx ) && ( ifft_data_out_re1_prev[1] !== ifft_data_out_re1_expected_prev[1] )
+		&& ((ifft_data_out_re1_expected_prev[1] !== last_ifft_data_out_re1_exp[1]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re1[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re1_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_ifft_data_out_re1_exp[1] = ifft_data_out_re1_expected_prev[1];
+	end
+	if (
+		( ifft_data_out_re1_expected_prev[2] !== 1'bx ) && ( ifft_data_out_re1_prev[2] !== ifft_data_out_re1_expected_prev[2] )
+		&& ((ifft_data_out_re1_expected_prev[2] !== last_ifft_data_out_re1_exp[2]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re1[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re1_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_ifft_data_out_re1_exp[2] = ifft_data_out_re1_expected_prev[2];
+	end
+	if (
+		( ifft_data_out_re1_expected_prev[3] !== 1'bx ) && ( ifft_data_out_re1_prev[3] !== ifft_data_out_re1_expected_prev[3] )
+		&& ((ifft_data_out_re1_expected_prev[3] !== last_ifft_data_out_re1_exp[3]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re1[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re1_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_ifft_data_out_re1_exp[3] = ifft_data_out_re1_expected_prev[3];
+	end
+	if (
+		( ifft_data_out_re1_expected_prev[4] !== 1'bx ) && ( ifft_data_out_re1_prev[4] !== ifft_data_out_re1_expected_prev[4] )
+		&& ((ifft_data_out_re1_expected_prev[4] !== last_ifft_data_out_re1_exp[4]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re1[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re1_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re1_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_ifft_data_out_re1_exp[4] = ifft_data_out_re1_expected_prev[4];
+	end
+	if (
+		( ifft_data_out_re2_expected_prev[0] !== 1'bx ) && ( ifft_data_out_re2_prev[0] !== ifft_data_out_re2_expected_prev[0] )
+		&& ((ifft_data_out_re2_expected_prev[0] !== last_ifft_data_out_re2_exp[0]) ||
+			on_first_change[16])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re2[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re2_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[16] = 1'b0;
+		last_ifft_data_out_re2_exp[0] = ifft_data_out_re2_expected_prev[0];
+	end
+	if (
+		( ifft_data_out_re2_expected_prev[1] !== 1'bx ) && ( ifft_data_out_re2_prev[1] !== ifft_data_out_re2_expected_prev[1] )
+		&& ((ifft_data_out_re2_expected_prev[1] !== last_ifft_data_out_re2_exp[1]) ||
+			on_first_change[16])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re2[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re2_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[16] = 1'b0;
+		last_ifft_data_out_re2_exp[1] = ifft_data_out_re2_expected_prev[1];
+	end
+	if (
+		( ifft_data_out_re2_expected_prev[2] !== 1'bx ) && ( ifft_data_out_re2_prev[2] !== ifft_data_out_re2_expected_prev[2] )
+		&& ((ifft_data_out_re2_expected_prev[2] !== last_ifft_data_out_re2_exp[2]) ||
+			on_first_change[16])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re2[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re2_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[16] = 1'b0;
+		last_ifft_data_out_re2_exp[2] = ifft_data_out_re2_expected_prev[2];
+	end
+	if (
+		( ifft_data_out_re2_expected_prev[3] !== 1'bx ) && ( ifft_data_out_re2_prev[3] !== ifft_data_out_re2_expected_prev[3] )
+		&& ((ifft_data_out_re2_expected_prev[3] !== last_ifft_data_out_re2_exp[3]) ||
+			on_first_change[16])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re2[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re2_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[16] = 1'b0;
+		last_ifft_data_out_re2_exp[3] = ifft_data_out_re2_expected_prev[3];
+	end
+	if (
+		( ifft_data_out_re2_expected_prev[4] !== 1'bx ) && ( ifft_data_out_re2_prev[4] !== ifft_data_out_re2_expected_prev[4] )
+		&& ((ifft_data_out_re2_expected_prev[4] !== last_ifft_data_out_re2_exp[4]) ||
+			on_first_change[16])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re2[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re2_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re2_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[16] = 1'b0;
+		last_ifft_data_out_re2_exp[4] = ifft_data_out_re2_expected_prev[4];
+	end
+	if (
+		( ifft_data_out_re3_expected_prev[0] !== 1'bx ) && ( ifft_data_out_re3_prev[0] !== ifft_data_out_re3_expected_prev[0] )
+		&& ((ifft_data_out_re3_expected_prev[0] !== last_ifft_data_out_re3_exp[0]) ||
+			on_first_change[17])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re3[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re3_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[17] = 1'b0;
+		last_ifft_data_out_re3_exp[0] = ifft_data_out_re3_expected_prev[0];
+	end
+	if (
+		( ifft_data_out_re3_expected_prev[1] !== 1'bx ) && ( ifft_data_out_re3_prev[1] !== ifft_data_out_re3_expected_prev[1] )
+		&& ((ifft_data_out_re3_expected_prev[1] !== last_ifft_data_out_re3_exp[1]) ||
+			on_first_change[17])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re3[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re3_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[17] = 1'b0;
+		last_ifft_data_out_re3_exp[1] = ifft_data_out_re3_expected_prev[1];
+	end
+	if (
+		( ifft_data_out_re3_expected_prev[2] !== 1'bx ) && ( ifft_data_out_re3_prev[2] !== ifft_data_out_re3_expected_prev[2] )
+		&& ((ifft_data_out_re3_expected_prev[2] !== last_ifft_data_out_re3_exp[2]) ||
+			on_first_change[17])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re3[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re3_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[17] = 1'b0;
+		last_ifft_data_out_re3_exp[2] = ifft_data_out_re3_expected_prev[2];
+	end
+	if (
+		( ifft_data_out_re3_expected_prev[3] !== 1'bx ) && ( ifft_data_out_re3_prev[3] !== ifft_data_out_re3_expected_prev[3] )
+		&& ((ifft_data_out_re3_expected_prev[3] !== last_ifft_data_out_re3_exp[3]) ||
+			on_first_change[17])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re3[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re3_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[17] = 1'b0;
+		last_ifft_data_out_re3_exp[3] = ifft_data_out_re3_expected_prev[3];
+	end
+	if (
+		( ifft_data_out_re3_expected_prev[4] !== 1'bx ) && ( ifft_data_out_re3_prev[4] !== ifft_data_out_re3_expected_prev[4] )
+		&& ((ifft_data_out_re3_expected_prev[4] !== last_ifft_data_out_re3_exp[4]) ||
+			on_first_change[17])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port ifft_data_out_re3[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", ifft_data_out_re3_expected_prev);
+		$display ("     Real value = %b", ifft_data_out_re3_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[17] = 1'b0;
+		last_ifft_data_out_re3_exp[4] = ifft_data_out_re3_expected_prev[4];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module FFT_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk;
+reg data_in_en;
+reg rst_n;
+// wires                                               
+wire data_out_en;
+wire [4:0] fft_data_out_im0;
+wire [4:0] fft_data_out_im1;
+wire [4:0] fft_data_out_im2;
+wire [4:0] fft_data_out_im3;
+wire [4:0] fft_data_out_re0;
+wire [4:0] fft_data_out_re1;
+wire [4:0] fft_data_out_re2;
+wire [4:0] fft_data_out_re3;
+wire [4:0] ifft_data_out_im0;
+wire [4:0] ifft_data_out_im1;
+wire [4:0] ifft_data_out_im2;
+wire [4:0] ifft_data_out_im3;
+wire [4:0] ifft_data_out_re0;
+wire [4:0] ifft_data_out_re1;
+wire [4:0] ifft_data_out_re2;
+wire [4:0] ifft_data_out_re3;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+FFT i1 (
+// port map - connection between master ports and signals/registers   
+	.clk(clk),
+	.data_in_en(data_in_en),
+	.data_out_en(data_out_en),
+	.fft_data_out_im0(fft_data_out_im0),
+	.fft_data_out_im1(fft_data_out_im1),
+	.fft_data_out_im2(fft_data_out_im2),
+	.fft_data_out_im3(fft_data_out_im3),
+	.fft_data_out_re0(fft_data_out_re0),
+	.fft_data_out_re1(fft_data_out_re1),
+	.fft_data_out_re2(fft_data_out_re2),
+	.fft_data_out_re3(fft_data_out_re3),
+	.ifft_data_out_im0(ifft_data_out_im0),
+	.ifft_data_out_im1(ifft_data_out_im1),
+	.ifft_data_out_im2(ifft_data_out_im2),
+	.ifft_data_out_im3(ifft_data_out_im3),
+	.ifft_data_out_re0(ifft_data_out_re0),
+	.ifft_data_out_re1(ifft_data_out_re1),
+	.ifft_data_out_re2(ifft_data_out_re2),
+	.ifft_data_out_re3(ifft_data_out_re3),
+	.rst_n(rst_n)
+);
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #5000 1'b1;
+	#5000;
+end 
+
+// data_in_en
+initial
+begin
+	data_in_en = 1'b1;
+end 
+
+// rst_n
+initial
+begin
+	rst_n = 1'b1;
+end 
+
+FFT_vlg_sample_tst tb_sample (
+	.clk(clk),
+	.data_in_en(data_in_en),
+	.rst_n(rst_n),
+	.sampler_tx(sampler)
+);
+
+FFT_vlg_check_tst tb_out(
+	.data_out_en(data_out_en),
+	.fft_data_out_im0(fft_data_out_im0),
+	.fft_data_out_im1(fft_data_out_im1),
+	.fft_data_out_im2(fft_data_out_im2),
+	.fft_data_out_im3(fft_data_out_im3),
+	.fft_data_out_re0(fft_data_out_re0),
+	.fft_data_out_re1(fft_data_out_re1),
+	.fft_data_out_re2(fft_data_out_re2),
+	.fft_data_out_re3(fft_data_out_re3),
+	.ifft_data_out_im0(ifft_data_out_im0),
+	.ifft_data_out_im1(ifft_data_out_im1),
+	.ifft_data_out_im2(ifft_data_out_im2),
+	.ifft_data_out_im3(ifft_data_out_im3),
+	.ifft_data_out_re0(ifft_data_out_re0),
+	.ifft_data_out_re1(ifft_data_out_re1),
+	.ifft_data_out_re2(ifft_data_out_re2),
+	.ifft_data_out_re3(ifft_data_out_re3),
+	.sampler_rx(sampler)
+);
+endmodule
+

@@ -1,0 +1,11 @@
+p=0.2;
+t=0:p:10;
+a=[1,2,1];
+b=[1,2];
+subplot(3,1,1),impulse(b,a)
+x=exp(-2*t).*stepfun(t,0);
+subplot(3,1,2),lsim(b,a,x,t)
+p=1;
+t=0:p:10;
+x=exp(-2*t).*stepfun(t,0);
+subplot(3,1,3),lsim(b,a,x,t)

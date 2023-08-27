@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 3.832 ns
+From           : trig[6]
+To             : time:inst9|lpm_mux0:inst2|lpm_mux:lpm_mux_component|mux_fle:auto_generated|external_reg[0]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.494 ns
+From           : time:inst9|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_p3i:auto_generated|safe_q[0]
+To             : timeout
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -2.194 ns
+From           : readaddres[5]
+To             : buff:inst|lpm_ram_dp0:inst1|altsyncram:altsyncram_component|altsyncram_g7k1:auto_generated|ram_block1a0~portb_address_reg5
+From Clock     : --
+To Clock       : readclk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 460.41 MHz ( period = 2.172 ns )
+From           : time:inst9|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_p3i:auto_generated|safe_q[0]
+To             : time:inst9|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_0oj:auto_generated|safe_q[0]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'readclk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 500.00 MHz ( period = 2.000 ns )
+From           : buff:inst|lpm_ram_dp0:inst1|altsyncram:altsyncram_component|altsyncram_g7k1:auto_generated|ram_block1a0~portb_address_reg5
+To             : buff:inst|lpm_ram_dp0:inst1|altsyncram:altsyncram_component|altsyncram_g7k1:auto_generated|q_b[7]
+From Clock     : readclk
+To Clock       : readclk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

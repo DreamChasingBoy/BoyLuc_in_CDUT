@@ -1,0 +1,15 @@
+Analysis & Synthesis Status : Successful - Fri Oct 28 14:39:06 2022
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : 8bit_compare
+Top-level Entity Name : 8bit_compare
+Family : Stratix II
+Logic utilization : N/A
+    Combinational ALUTs : 92
+    Dedicated logic registers : 64
+Total registers : 64
+Total pins : 26
+Total virtual pins : 0
+Total block memory bits : 0
+DSP block 9-bit elements : 0
+Total PLLs : 0
+Total DLLs : 0

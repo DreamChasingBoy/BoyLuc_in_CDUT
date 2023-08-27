@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Dec 14 20:04:57 2022
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : filter
+Top-level Entity Name : filter
+Family : Cyclone II
+Device : EP2C15AF256A7
+Timing Models : Final
+Total logic elements : 349 / 14,448 ( 2 % )
+    Total combinational functions : 237 / 14,448 ( 2 % )
+    Dedicated logic registers : 258 / 14,448 ( 2 % )
+Total registers : 258
+Total pins : 38 / 152 ( 25 % )
+Total virtual pins : 0
+Total memory bits : 0 / 239,616 ( 0 % )
+Embedded Multiplier 9-bit elements : 8 / 52 ( 15 % )
+Total PLLs : 0 / 4 ( 0 % )

@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="filter">
+		<CBX_INST_ENTRY INSTANCE_NAME="|filter|lpm_add_sub0:inst44|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_mjj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|filter|lpm_mult0:inst26|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_26p.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|filter|lpm_mult0:inst31|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_26p.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|filter|lpm_mult0:inst|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_26p.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|filter|lpm_add_sub0:inst45|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_mjj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|filter|lpm_divide0:inst48|lpm_divide:lpm_divide_component" CBX_FILE_NAME="lpm_divide_oqr.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|filter|lpm_mult0:inst27|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_26p.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|filter|lpm_add_sub0:inst33|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_mjj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|filter|lpm_add_sub0:inst42|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_mjj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|filter|lpm_add_sub0:inst46|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_mjj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|filter|lpm_mult0:inst28|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_26p.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|filter|lpm_add_sub0:inst43|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_mjj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|filter|lpm_add_sub0:inst47|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_mjj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|filter|lpm_mult0:inst25|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_26p.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|filter|lpm_mult0:inst29|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_26p.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|filter|lpm_mult0:inst30|lpm_mult:lpm_mult_component" CBX_FILE_NAME="mult_26p.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

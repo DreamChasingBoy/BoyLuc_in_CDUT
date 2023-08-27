@@ -1,0 +1,17 @@
+Fitter Status : Successful - Sun Nov 20 15:47:51 2022
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : RAM
+Top-level Entity Name : RAM
+Family : Stratix II
+Device : EP2S15F484C3
+Timing Models : Final
+Logic utilization : < 1 %
+    Combinational ALUTs : 21 / 12,480 ( < 1 % )
+    Dedicated logic registers : 15 / 12,480 ( < 1 % )
+Total registers : 15
+Total pins : 34 / 343 ( 10 % )
+Total virtual pins : 0
+Total block memory bits : 768 / 419,328 ( < 1 % )
+DSP block 9-bit elements : 0 / 96 ( 0 % )
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 2 ( 0 % )

@@ -1,0 +1,14 @@
+clear;
+clc;
+syms t;
+xt=cos(200*pi*t);
+fplot(xt);
+j=1/4000;
+n=0:j:1;
+n=n(1:4000);
+yt=cos(200*pi*n);
+subplot(1,2,1),plot(n,yt);
+w=-5:0.0025:5;
+w=w(1:4000);
+XW=abs(myDTFT(yt,w));
+subplot(1,2,2),plot(w,XW);

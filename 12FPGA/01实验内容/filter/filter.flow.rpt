@@ -1,0 +1,140 @@
+Flow report for filter
+Wed Dec 14 20:05:01 2022
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++------------------------------------+------------------------------------------+
+; Flow Status                        ; Successful - Wed Dec 14 20:05:01 2022    ;
+; Quartus II Version                 ; 8.1 Build 163 10/28/2008 SJ Full Version ;
+; Revision Name                      ; filter                                   ;
+; Top-level Entity Name              ; filter                                   ;
+; Family                             ; Cyclone II                               ;
+; Device                             ; EP2C15AF256A7                            ;
+; Timing Models                      ; Final                                    ;
+; Met timing requirements            ; Yes                                      ;
+; Total logic elements               ; 349 / 14,448 ( 2 % )                     ;
+;     Total combinational functions  ; 237 / 14,448 ( 2 % )                     ;
+;     Dedicated logic registers      ; 258 / 14,448 ( 2 % )                     ;
+; Total registers                    ; 258                                      ;
+; Total pins                         ; 38 / 152 ( 25 % )                        ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0 / 239,616 ( 0 % )                      ;
+; Embedded Multiplier 9-bit elements ; 8 / 52 ( 15 % )                          ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                            ;
++------------------------------------+------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 12/14/2022 20:04:49 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; filter              ;
++-------------------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                    ;
++------------------------------------+---------------------------------+---------------+-------------+----------------+
+; Assignment Name                    ; Value                           ; Default Value ; Entity Name ; Section Id     ;
++------------------------------------+---------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 202972277157319.167101948940392 ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_FF                          ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_MULT                        ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_ADD_SUB                     ; --            ; --          ; --             ;
+; IP_TOOL_NAME                       ; LPM_DIVIDE                      ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 8.1                             ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 8.1                             ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 8.1                             ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                    ; 8.1                             ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 125                             ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; -40                             ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_dff0.tdf                    ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_dff0.bsf                    ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_dff0.inc                    ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mult0.tdf                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mult0.bsf                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_mult0.inc                   ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_add_sub0.tdf                ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_add_sub0.bsf                ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_add_sub0.inc                ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_divide0.tdf                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_divide0.bsf                 ; --            ; --          ; --             ;
+; MISC_FILE                          ; lpm_divide0.inc                 ; --            ; --          ; --             ;
+; PARTITION_COLOR                    ; 16764057                        ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                          ; --            ; --          ; Top            ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --          ; eda_blast_fpga ;
++------------------------------------+---------------------------------+---------------+-------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis    ; 00:00:02     ; 1.0                     ; 231 MB              ; 00:00:02                           ;
+; Fitter                  ; 00:00:04     ; 1.0                     ; 291 MB              ; 00:00:04                           ;
+; Assembler               ; 00:00:02     ; 1.0                     ; 243 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 181 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:08     ; --                      ; --                  ; 00:00:07                           ;
++-------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                          ;
++-------------------------+------------------+---------------+------------+----------------+
+; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
++-------------------------+------------------+---------------+------------+----------------+
+; Analysis & Synthesis    ; LAPTOP-V4UVUUOO  ; Windows Vista ; 6.2        ; x86_64         ;
+; Fitter                  ; LAPTOP-V4UVUUOO  ; Windows Vista ; 6.2        ; x86_64         ;
+; Assembler               ; LAPTOP-V4UVUUOO  ; Windows Vista ; 6.2        ; x86_64         ;
+; Classic Timing Analyzer ; LAPTOP-V4UVUUOO  ; Windows Vista ; 6.2        ; x86_64         ;
++-------------------------+------------------+---------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off filter -c filter
+quartus_fit --read_settings_files=off --write_settings_files=off filter -c filter
+quartus_asm --read_settings_files=off --write_settings_files=off filter -c filter
+quartus_tan --read_settings_files=off --write_settings_files=off filter -c filter --timing_analysis_only
+
+
+

@@ -1,0 +1,6 @@
+t=linspace(-10,10,1000);
+n=linspace(-10,10);
+f=cos(t);
+F=cos(n);
+subplot(,2,1),plot(t,f);
+title('f(t)=t');

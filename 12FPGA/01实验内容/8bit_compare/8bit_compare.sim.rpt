@@ -1,0 +1,373 @@
+Simulator report for 8bit_compare
+Fri Oct 28 15:23:23 2022
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 183 nodes    ;
+; Simulation Coverage         ;      80.87 % ;
+; Total Number of Transitions ; 7117         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
+; Device                      ; EP2S15F484C3 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      80.87 % ;
+; Total nodes checked                                 ; 183          ;
+; Total output ports checked                          ; 183          ;
+; Total output ports with complete 1/0-value coverage ; 148          ;
+; Total output ports with no 1/0-value coverage       ; 26           ;
+; Total output ports with no 1-value coverage         ; 26           ;
+; Total output ports with no 0-value coverage         ; 35           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                                                                      ;
++-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                             ; Output Port Name                                                                                                      ; Output Port Type ;
++-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+------------------+
+; |8bit_compare|Max2data:inst16|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~445    ; |8bit_compare|Max2data:inst16|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~445    ; combout          ;
+; |8bit_compare|lpm_dff0:inst5|lpm_ff:lpm_ff_component|dffs[4]                                                          ; |8bit_compare|lpm_dff0:inst5|lpm_ff:lpm_ff_component|dffs[4]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst4|lpm_ff:lpm_ff_component|dffs[4]                                                          ; |8bit_compare|lpm_dff0:inst4|lpm_ff:lpm_ff_component|dffs[4]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst5|lpm_ff:lpm_ff_component|dffs[5]                                                          ; |8bit_compare|lpm_dff0:inst5|lpm_ff:lpm_ff_component|dffs[5]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst4|lpm_ff:lpm_ff_component|dffs[5]                                                          ; |8bit_compare|lpm_dff0:inst4|lpm_ff:lpm_ff_component|dffs[5]                                                          ; regout           ;
+; |8bit_compare|Max2data:inst|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~543      ; |8bit_compare|Max2data:inst|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~543      ; combout          ;
+; |8bit_compare|Max2data:inst|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~544      ; |8bit_compare|Max2data:inst|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~544      ; combout          ;
+; |8bit_compare|lpm_dff0:inst5|lpm_ff:lpm_ff_component|dffs[3]                                                          ; |8bit_compare|lpm_dff0:inst5|lpm_ff:lpm_ff_component|dffs[3]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst4|lpm_ff:lpm_ff_component|dffs[3]                                                          ; |8bit_compare|lpm_dff0:inst4|lpm_ff:lpm_ff_component|dffs[3]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst5|lpm_ff:lpm_ff_component|dffs[2]                                                          ; |8bit_compare|lpm_dff0:inst5|lpm_ff:lpm_ff_component|dffs[2]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst4|lpm_ff:lpm_ff_component|dffs[2]                                                          ; |8bit_compare|lpm_dff0:inst4|lpm_ff:lpm_ff_component|dffs[2]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst5|lpm_ff:lpm_ff_component|dffs[1]                                                          ; |8bit_compare|lpm_dff0:inst5|lpm_ff:lpm_ff_component|dffs[1]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst4|lpm_ff:lpm_ff_component|dffs[1]                                                          ; |8bit_compare|lpm_dff0:inst4|lpm_ff:lpm_ff_component|dffs[1]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst5|lpm_ff:lpm_ff_component|dffs[0]                                                          ; |8bit_compare|lpm_dff0:inst5|lpm_ff:lpm_ff_component|dffs[0]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst4|lpm_ff:lpm_ff_component|dffs[0]                                                          ; |8bit_compare|lpm_dff0:inst4|lpm_ff:lpm_ff_component|dffs[0]                                                          ; regout           ;
+; |8bit_compare|Max2data:inst|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~545      ; |8bit_compare|Max2data:inst|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~545      ; combout          ;
+; |8bit_compare|Max2data:inst|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~546      ; |8bit_compare|Max2data:inst|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~546      ; combout          ;
+; |8bit_compare|Max2data:inst|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~547      ; |8bit_compare|Max2data:inst|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~547      ; combout          ;
+; |8bit_compare|lpm_dff0:inst6|lpm_ff:lpm_ff_component|dffs[4]                                                          ; |8bit_compare|lpm_dff0:inst6|lpm_ff:lpm_ff_component|dffs[4]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst7|lpm_ff:lpm_ff_component|dffs[4]                                                          ; |8bit_compare|lpm_dff0:inst7|lpm_ff:lpm_ff_component|dffs[4]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst7|lpm_ff:lpm_ff_component|dffs[5]                                                          ; |8bit_compare|lpm_dff0:inst7|lpm_ff:lpm_ff_component|dffs[5]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst6|lpm_ff:lpm_ff_component|dffs[5]                                                          ; |8bit_compare|lpm_dff0:inst6|lpm_ff:lpm_ff_component|dffs[5]                                                          ; regout           ;
+; |8bit_compare|Max2data:inst2|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~553     ; |8bit_compare|Max2data:inst2|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~553     ; combout          ;
+; |8bit_compare|Max2data:inst2|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~554     ; |8bit_compare|Max2data:inst2|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~554     ; combout          ;
+; |8bit_compare|lpm_dff0:inst7|lpm_ff:lpm_ff_component|dffs[3]                                                          ; |8bit_compare|lpm_dff0:inst7|lpm_ff:lpm_ff_component|dffs[3]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst6|lpm_ff:lpm_ff_component|dffs[3]                                                          ; |8bit_compare|lpm_dff0:inst6|lpm_ff:lpm_ff_component|dffs[3]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst7|lpm_ff:lpm_ff_component|dffs[2]                                                          ; |8bit_compare|lpm_dff0:inst7|lpm_ff:lpm_ff_component|dffs[2]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst6|lpm_ff:lpm_ff_component|dffs[2]                                                          ; |8bit_compare|lpm_dff0:inst6|lpm_ff:lpm_ff_component|dffs[2]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst6|lpm_ff:lpm_ff_component|dffs[1]                                                          ; |8bit_compare|lpm_dff0:inst6|lpm_ff:lpm_ff_component|dffs[1]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst7|lpm_ff:lpm_ff_component|dffs[1]                                                          ; |8bit_compare|lpm_dff0:inst7|lpm_ff:lpm_ff_component|dffs[1]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst7|lpm_ff:lpm_ff_component|dffs[0]                                                          ; |8bit_compare|lpm_dff0:inst7|lpm_ff:lpm_ff_component|dffs[0]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst6|lpm_ff:lpm_ff_component|dffs[0]                                                          ; |8bit_compare|lpm_dff0:inst6|lpm_ff:lpm_ff_component|dffs[0]                                                          ; regout           ;
+; |8bit_compare|Max2data:inst2|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~555     ; |8bit_compare|Max2data:inst2|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~555     ; combout          ;
+; |8bit_compare|Max2data:inst2|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~556     ; |8bit_compare|Max2data:inst2|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~556     ; combout          ;
+; |8bit_compare|Max2data:inst2|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~557     ; |8bit_compare|Max2data:inst2|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~557     ; combout          ;
+; |8bit_compare|Max2data:inst2|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w4_n0_mux_dataout~15  ; |8bit_compare|Max2data:inst2|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w4_n0_mux_dataout~15  ; combout          ;
+; |8bit_compare|Max2data:inst|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w4_n0_mux_dataout~15   ; |8bit_compare|Max2data:inst|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w4_n0_mux_dataout~15   ; combout          ;
+; |8bit_compare|Max2data:inst2|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w6_n0_mux_dataout~15  ; |8bit_compare|Max2data:inst2|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w6_n0_mux_dataout~15  ; combout          ;
+; |8bit_compare|Max2data:inst|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w6_n0_mux_dataout~15   ; |8bit_compare|Max2data:inst|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w6_n0_mux_dataout~15   ; combout          ;
+; |8bit_compare|Max2data:inst2|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w5_n0_mux_dataout~15  ; |8bit_compare|Max2data:inst2|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w5_n0_mux_dataout~15  ; combout          ;
+; |8bit_compare|Max2data:inst|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w5_n0_mux_dataout~15   ; |8bit_compare|Max2data:inst|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w5_n0_mux_dataout~15   ; combout          ;
+; |8bit_compare|Max2data:inst15|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~434    ; |8bit_compare|Max2data:inst15|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~434    ; combout          ;
+; |8bit_compare|Max2data:inst15|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~435    ; |8bit_compare|Max2data:inst15|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~435    ; combout          ;
+; |8bit_compare|Max2data:inst2|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w3_n0_mux_dataout~15  ; |8bit_compare|Max2data:inst2|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w3_n0_mux_dataout~15  ; combout          ;
+; |8bit_compare|Max2data:inst|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w3_n0_mux_dataout~15   ; |8bit_compare|Max2data:inst|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w3_n0_mux_dataout~15   ; combout          ;
+; |8bit_compare|Max2data:inst2|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w2_n0_mux_dataout~15  ; |8bit_compare|Max2data:inst2|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w2_n0_mux_dataout~15  ; combout          ;
+; |8bit_compare|Max2data:inst|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w2_n0_mux_dataout~15   ; |8bit_compare|Max2data:inst|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w2_n0_mux_dataout~15   ; combout          ;
+; |8bit_compare|Max2data:inst2|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w1_n0_mux_dataout~15  ; |8bit_compare|Max2data:inst2|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w1_n0_mux_dataout~15  ; combout          ;
+; |8bit_compare|Max2data:inst|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w0_n0_mux_dataout~15   ; |8bit_compare|Max2data:inst|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w0_n0_mux_dataout~15   ; combout          ;
+; |8bit_compare|Max2data:inst15|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~436    ; |8bit_compare|Max2data:inst15|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~436    ; combout          ;
+; |8bit_compare|Max2data:inst15|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~437    ; |8bit_compare|Max2data:inst15|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~437    ; combout          ;
+; |8bit_compare|Max2data:inst15|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~438    ; |8bit_compare|Max2data:inst15|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~438    ; combout          ;
+; |8bit_compare|Max2data:inst15|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~439    ; |8bit_compare|Max2data:inst15|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~439    ; combout          ;
+; |8bit_compare|lpm_dff0:inst8|lpm_ff:lpm_ff_component|dffs[4]                                                          ; |8bit_compare|lpm_dff0:inst8|lpm_ff:lpm_ff_component|dffs[4]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst9|lpm_ff:lpm_ff_component|dffs[4]                                                          ; |8bit_compare|lpm_dff0:inst9|lpm_ff:lpm_ff_component|dffs[4]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst9|lpm_ff:lpm_ff_component|dffs[5]                                                          ; |8bit_compare|lpm_dff0:inst9|lpm_ff:lpm_ff_component|dffs[5]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst8|lpm_ff:lpm_ff_component|dffs[5]                                                          ; |8bit_compare|lpm_dff0:inst8|lpm_ff:lpm_ff_component|dffs[5]                                                          ; regout           ;
+; |8bit_compare|Max2data:inst3|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~553     ; |8bit_compare|Max2data:inst3|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~553     ; combout          ;
+; |8bit_compare|Max2data:inst3|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~554     ; |8bit_compare|Max2data:inst3|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~554     ; combout          ;
+; |8bit_compare|lpm_dff0:inst9|lpm_ff:lpm_ff_component|dffs[3]                                                          ; |8bit_compare|lpm_dff0:inst9|lpm_ff:lpm_ff_component|dffs[3]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst8|lpm_ff:lpm_ff_component|dffs[3]                                                          ; |8bit_compare|lpm_dff0:inst8|lpm_ff:lpm_ff_component|dffs[3]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst9|lpm_ff:lpm_ff_component|dffs[2]                                                          ; |8bit_compare|lpm_dff0:inst9|lpm_ff:lpm_ff_component|dffs[2]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst8|lpm_ff:lpm_ff_component|dffs[2]                                                          ; |8bit_compare|lpm_dff0:inst8|lpm_ff:lpm_ff_component|dffs[2]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst8|lpm_ff:lpm_ff_component|dffs[1]                                                          ; |8bit_compare|lpm_dff0:inst8|lpm_ff:lpm_ff_component|dffs[1]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst9|lpm_ff:lpm_ff_component|dffs[1]                                                          ; |8bit_compare|lpm_dff0:inst9|lpm_ff:lpm_ff_component|dffs[1]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst9|lpm_ff:lpm_ff_component|dffs[0]                                                          ; |8bit_compare|lpm_dff0:inst9|lpm_ff:lpm_ff_component|dffs[0]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst8|lpm_ff:lpm_ff_component|dffs[0]                                                          ; |8bit_compare|lpm_dff0:inst8|lpm_ff:lpm_ff_component|dffs[0]                                                          ; regout           ;
+; |8bit_compare|Max2data:inst3|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~555     ; |8bit_compare|Max2data:inst3|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~555     ; combout          ;
+; |8bit_compare|Max2data:inst3|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~556     ; |8bit_compare|Max2data:inst3|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~556     ; combout          ;
+; |8bit_compare|Max2data:inst3|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~557     ; |8bit_compare|Max2data:inst3|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~557     ; combout          ;
+; |8bit_compare|lpm_dff0:inst10|lpm_ff:lpm_ff_component|dffs[4]                                                         ; |8bit_compare|lpm_dff0:inst10|lpm_ff:lpm_ff_component|dffs[4]                                                         ; regout           ;
+; |8bit_compare|lpm_dff0:inst11|lpm_ff:lpm_ff_component|dffs[4]                                                         ; |8bit_compare|lpm_dff0:inst11|lpm_ff:lpm_ff_component|dffs[4]                                                         ; regout           ;
+; |8bit_compare|lpm_dff0:inst11|lpm_ff:lpm_ff_component|dffs[5]                                                         ; |8bit_compare|lpm_dff0:inst11|lpm_ff:lpm_ff_component|dffs[5]                                                         ; regout           ;
+; |8bit_compare|lpm_dff0:inst10|lpm_ff:lpm_ff_component|dffs[5]                                                         ; |8bit_compare|lpm_dff0:inst10|lpm_ff:lpm_ff_component|dffs[5]                                                         ; regout           ;
+; |8bit_compare|Max2data:inst14|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~553    ; |8bit_compare|Max2data:inst14|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~553    ; combout          ;
+; |8bit_compare|Max2data:inst14|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~554    ; |8bit_compare|Max2data:inst14|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~554    ; combout          ;
+; |8bit_compare|lpm_dff0:inst11|lpm_ff:lpm_ff_component|dffs[3]                                                         ; |8bit_compare|lpm_dff0:inst11|lpm_ff:lpm_ff_component|dffs[3]                                                         ; regout           ;
+; |8bit_compare|lpm_dff0:inst10|lpm_ff:lpm_ff_component|dffs[3]                                                         ; |8bit_compare|lpm_dff0:inst10|lpm_ff:lpm_ff_component|dffs[3]                                                         ; regout           ;
+; |8bit_compare|lpm_dff0:inst11|lpm_ff:lpm_ff_component|dffs[2]                                                         ; |8bit_compare|lpm_dff0:inst11|lpm_ff:lpm_ff_component|dffs[2]                                                         ; regout           ;
+; |8bit_compare|lpm_dff0:inst10|lpm_ff:lpm_ff_component|dffs[2]                                                         ; |8bit_compare|lpm_dff0:inst10|lpm_ff:lpm_ff_component|dffs[2]                                                         ; regout           ;
+; |8bit_compare|lpm_dff0:inst10|lpm_ff:lpm_ff_component|dffs[1]                                                         ; |8bit_compare|lpm_dff0:inst10|lpm_ff:lpm_ff_component|dffs[1]                                                         ; regout           ;
+; |8bit_compare|lpm_dff0:inst11|lpm_ff:lpm_ff_component|dffs[1]                                                         ; |8bit_compare|lpm_dff0:inst11|lpm_ff:lpm_ff_component|dffs[1]                                                         ; regout           ;
+; |8bit_compare|lpm_dff0:inst11|lpm_ff:lpm_ff_component|dffs[0]                                                         ; |8bit_compare|lpm_dff0:inst11|lpm_ff:lpm_ff_component|dffs[0]                                                         ; regout           ;
+; |8bit_compare|lpm_dff0:inst10|lpm_ff:lpm_ff_component|dffs[0]                                                         ; |8bit_compare|lpm_dff0:inst10|lpm_ff:lpm_ff_component|dffs[0]                                                         ; regout           ;
+; |8bit_compare|Max2data:inst14|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~555    ; |8bit_compare|Max2data:inst14|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~555    ; combout          ;
+; |8bit_compare|Max2data:inst14|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~556    ; |8bit_compare|Max2data:inst14|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~556    ; combout          ;
+; |8bit_compare|Max2data:inst14|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~557    ; |8bit_compare|Max2data:inst14|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~557    ; combout          ;
+; |8bit_compare|Max2data:inst3|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w4_n0_mux_dataout~15  ; |8bit_compare|Max2data:inst3|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w4_n0_mux_dataout~15  ; combout          ;
+; |8bit_compare|Max2data:inst14|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w4_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst14|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w4_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst14|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w6_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst14|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w6_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst3|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w6_n0_mux_dataout~15  ; |8bit_compare|Max2data:inst3|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w6_n0_mux_dataout~15  ; combout          ;
+; |8bit_compare|Max2data:inst14|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w5_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst14|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w5_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst3|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w5_n0_mux_dataout~15  ; |8bit_compare|Max2data:inst3|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w5_n0_mux_dataout~15  ; combout          ;
+; |8bit_compare|Max2data:inst16|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~441    ; |8bit_compare|Max2data:inst16|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~441    ; combout          ;
+; |8bit_compare|Max2data:inst16|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~442    ; |8bit_compare|Max2data:inst16|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~442    ; combout          ;
+; |8bit_compare|Max2data:inst14|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w3_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst14|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w3_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst3|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w3_n0_mux_dataout~15  ; |8bit_compare|Max2data:inst3|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w3_n0_mux_dataout~15  ; combout          ;
+; |8bit_compare|Max2data:inst14|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w2_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst14|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w2_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst3|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w2_n0_mux_dataout~15  ; |8bit_compare|Max2data:inst3|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w2_n0_mux_dataout~15  ; combout          ;
+; |8bit_compare|Max2data:inst3|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w1_n0_mux_dataout~15  ; |8bit_compare|Max2data:inst3|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w1_n0_mux_dataout~15  ; combout          ;
+; |8bit_compare|Max2data:inst3|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w0_n0_mux_dataout~15  ; |8bit_compare|Max2data:inst3|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w0_n0_mux_dataout~15  ; combout          ;
+; |8bit_compare|Max2data:inst16|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~443    ; |8bit_compare|Max2data:inst16|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~443    ; combout          ;
+; |8bit_compare|Max2data:inst16|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~444    ; |8bit_compare|Max2data:inst16|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~444    ; combout          ;
+; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w4_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w4_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst15|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w4_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst15|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w4_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w6_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w6_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst15|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w6_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst15|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w6_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w5_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w5_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst15|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w5_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst15|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w5_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst17|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~426    ; |8bit_compare|Max2data:inst17|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~426    ; combout          ;
+; |8bit_compare|Max2data:inst17|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~427    ; |8bit_compare|Max2data:inst17|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~427    ; combout          ;
+; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w3_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w3_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst15|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w3_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst15|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w3_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w2_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w2_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst15|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w2_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst15|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w2_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w1_n0_mux_dataout~19 ; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w1_n0_mux_dataout~19 ; combout          ;
+; |8bit_compare|Max2data:inst15|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w1_n0_mux_dataout~18 ; |8bit_compare|Max2data:inst15|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w1_n0_mux_dataout~18 ; combout          ;
+; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w0_n0_mux_dataout~19 ; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w0_n0_mux_dataout~19 ; combout          ;
+; |8bit_compare|Max2data:inst15|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w0_n0_mux_dataout~18 ; |8bit_compare|Max2data:inst15|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w0_n0_mux_dataout~18 ; combout          ;
+; |8bit_compare|Max2data:inst17|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~428    ; |8bit_compare|Max2data:inst17|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~428    ; combout          ;
+; |8bit_compare|Max2data:inst17|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~429    ; |8bit_compare|Max2data:inst17|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~429    ; combout          ;
+; |8bit_compare|Max2data:inst17|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~430    ; |8bit_compare|Max2data:inst17|lpm_compare0:inst|lpm_compare:lpm_compare_component|cmpr_hig:auto_generated|op_1~430    ; combout          ;
+; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w6_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w6_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w5_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w5_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w4_n0_mux_dataout~17 ; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w4_n0_mux_dataout~17 ; combout          ;
+; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w3_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w3_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w2_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w2_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w1_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w1_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w0_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w0_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w1_n0_mux_dataout~20 ; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w1_n0_mux_dataout~20 ; combout          ;
+; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w0_n0_mux_dataout~20 ; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w0_n0_mux_dataout~20 ; combout          ;
+; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w4_n0_mux_dataout~18 ; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w4_n0_mux_dataout~18 ; combout          ;
+; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w4_n0_mux_dataout~19 ; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w4_n0_mux_dataout~19 ; combout          ;
+; |8bit_compare|Max[6]                                                                                                  ; |8bit_compare|Max[6]                                                                                                  ; padio            ;
+; |8bit_compare|Max[5]                                                                                                  ; |8bit_compare|Max[5]                                                                                                  ; padio            ;
+; |8bit_compare|Max[4]                                                                                                  ; |8bit_compare|Max[4]                                                                                                  ; padio            ;
+; |8bit_compare|Max[3]                                                                                                  ; |8bit_compare|Max[3]                                                                                                  ; padio            ;
+; |8bit_compare|Max[2]                                                                                                  ; |8bit_compare|Max[2]                                                                                                  ; padio            ;
+; |8bit_compare|Max[1]                                                                                                  ; |8bit_compare|Max[1]                                                                                                  ; padio            ;
+; |8bit_compare|Max[0]                                                                                                  ; |8bit_compare|Max[0]                                                                                                  ; padio            ;
+; |8bit_compare|clk                                                                                                     ; |8bit_compare|clk~corein                                                                                              ; combout          ;
+; |8bit_compare|Data[4]                                                                                                 ; |8bit_compare|Data[4]~corein                                                                                          ; combout          ;
+; |8bit_compare|Data[5]                                                                                                 ; |8bit_compare|Data[5]~corein                                                                                          ; combout          ;
+; |8bit_compare|Data[3]                                                                                                 ; |8bit_compare|Data[3]~corein                                                                                          ; combout          ;
+; |8bit_compare|Data[2]                                                                                                 ; |8bit_compare|Data[2]~corein                                                                                          ; combout          ;
+; |8bit_compare|Data[1]                                                                                                 ; |8bit_compare|Data[1]~corein                                                                                          ; combout          ;
+; |8bit_compare|Data[0]                                                                                                 ; |8bit_compare|Data[0]~corein                                                                                          ; combout          ;
+; |8bit_compare|clk~clkctrl                                                                                             ; |8bit_compare|clk~clkctrl                                                                                             ; outclk           ;
++-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                                                         ;
++-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                             ; Output Port Name                                                                                                      ; Output Port Type ;
++-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+------------------+
+; |8bit_compare|lpm_dff0:inst4|lpm_ff:lpm_ff_component|dffs[7]                                                          ; |8bit_compare|lpm_dff0:inst4|lpm_ff:lpm_ff_component|dffs[7]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst5|lpm_ff:lpm_ff_component|dffs[7]                                                          ; |8bit_compare|lpm_dff0:inst5|lpm_ff:lpm_ff_component|dffs[7]                                                          ; regout           ;
+; |8bit_compare|Max2data:inst|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15   ; |8bit_compare|Max2data:inst|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15   ; combout          ;
+; |8bit_compare|lpm_dff0:inst7|lpm_ff:lpm_ff_component|dffs[7]                                                          ; |8bit_compare|lpm_dff0:inst7|lpm_ff:lpm_ff_component|dffs[7]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst6|lpm_ff:lpm_ff_component|dffs[7]                                                          ; |8bit_compare|lpm_dff0:inst6|lpm_ff:lpm_ff_component|dffs[7]                                                          ; regout           ;
+; |8bit_compare|Max2data:inst2|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15  ; |8bit_compare|Max2data:inst2|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15  ; combout          ;
+; |8bit_compare|Max2data:inst15|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst15|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|lpm_dff0:inst9|lpm_ff:lpm_ff_component|dffs[7]                                                          ; |8bit_compare|lpm_dff0:inst9|lpm_ff:lpm_ff_component|dffs[7]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst8|lpm_ff:lpm_ff_component|dffs[7]                                                          ; |8bit_compare|lpm_dff0:inst8|lpm_ff:lpm_ff_component|dffs[7]                                                          ; regout           ;
+; |8bit_compare|Max2data:inst3|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15  ; |8bit_compare|Max2data:inst3|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15  ; combout          ;
+; |8bit_compare|lpm_dff0:inst11|lpm_ff:lpm_ff_component|dffs[7]                                                         ; |8bit_compare|lpm_dff0:inst11|lpm_ff:lpm_ff_component|dffs[7]                                                         ; regout           ;
+; |8bit_compare|lpm_dff0:inst10|lpm_ff:lpm_ff_component|dffs[7]                                                         ; |8bit_compare|lpm_dff0:inst10|lpm_ff:lpm_ff_component|dffs[7]                                                         ; regout           ;
+; |8bit_compare|Max2data:inst14|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst14|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max[7]                                                                                                  ; |8bit_compare|Max[7]                                                                                                  ; padio            ;
+; |8bit_compare|MPos[7]                                                                                                 ; |8bit_compare|MPos[7]                                                                                                 ; padio            ;
+; |8bit_compare|MPos[6]                                                                                                 ; |8bit_compare|MPos[6]                                                                                                 ; padio            ;
+; |8bit_compare|MPos[5]                                                                                                 ; |8bit_compare|MPos[5]                                                                                                 ; padio            ;
+; |8bit_compare|MPos[4]                                                                                                 ; |8bit_compare|MPos[4]                                                                                                 ; padio            ;
+; |8bit_compare|MPos[3]                                                                                                 ; |8bit_compare|MPos[3]                                                                                                 ; padio            ;
+; |8bit_compare|MPos[2]                                                                                                 ; |8bit_compare|MPos[2]                                                                                                 ; padio            ;
+; |8bit_compare|MPos[1]                                                                                                 ; |8bit_compare|MPos[1]                                                                                                 ; padio            ;
+; |8bit_compare|MPos[0]                                                                                                 ; |8bit_compare|MPos[0]                                                                                                 ; padio            ;
+; |8bit_compare|Data[7]                                                                                                 ; |8bit_compare|Data[7]~corein                                                                                          ; combout          ;
+; |8bit_compare|En                                                                                                      ; |8bit_compare|En~corein                                                                                               ; combout          ;
++-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                                                         ;
++-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                             ; Output Port Name                                                                                                      ; Output Port Type ;
++-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+------------------+
+; |8bit_compare|lpm_dff0:inst4|lpm_ff:lpm_ff_component|dffs[7]                                                          ; |8bit_compare|lpm_dff0:inst4|lpm_ff:lpm_ff_component|dffs[7]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst5|lpm_ff:lpm_ff_component|dffs[7]                                                          ; |8bit_compare|lpm_dff0:inst5|lpm_ff:lpm_ff_component|dffs[7]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst5|lpm_ff:lpm_ff_component|dffs[6]                                                          ; |8bit_compare|lpm_dff0:inst5|lpm_ff:lpm_ff_component|dffs[6]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst4|lpm_ff:lpm_ff_component|dffs[6]                                                          ; |8bit_compare|lpm_dff0:inst4|lpm_ff:lpm_ff_component|dffs[6]                                                          ; regout           ;
+; |8bit_compare|Max2data:inst|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15   ; |8bit_compare|Max2data:inst|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15   ; combout          ;
+; |8bit_compare|lpm_dff0:inst7|lpm_ff:lpm_ff_component|dffs[7]                                                          ; |8bit_compare|lpm_dff0:inst7|lpm_ff:lpm_ff_component|dffs[7]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst6|lpm_ff:lpm_ff_component|dffs[7]                                                          ; |8bit_compare|lpm_dff0:inst6|lpm_ff:lpm_ff_component|dffs[7]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst7|lpm_ff:lpm_ff_component|dffs[6]                                                          ; |8bit_compare|lpm_dff0:inst7|lpm_ff:lpm_ff_component|dffs[6]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst6|lpm_ff:lpm_ff_component|dffs[6]                                                          ; |8bit_compare|lpm_dff0:inst6|lpm_ff:lpm_ff_component|dffs[6]                                                          ; regout           ;
+; |8bit_compare|Max2data:inst2|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15  ; |8bit_compare|Max2data:inst2|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15  ; combout          ;
+; |8bit_compare|Max2data:inst15|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst15|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|lpm_dff0:inst9|lpm_ff:lpm_ff_component|dffs[7]                                                          ; |8bit_compare|lpm_dff0:inst9|lpm_ff:lpm_ff_component|dffs[7]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst8|lpm_ff:lpm_ff_component|dffs[7]                                                          ; |8bit_compare|lpm_dff0:inst8|lpm_ff:lpm_ff_component|dffs[7]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst9|lpm_ff:lpm_ff_component|dffs[6]                                                          ; |8bit_compare|lpm_dff0:inst9|lpm_ff:lpm_ff_component|dffs[6]                                                          ; regout           ;
+; |8bit_compare|lpm_dff0:inst8|lpm_ff:lpm_ff_component|dffs[6]                                                          ; |8bit_compare|lpm_dff0:inst8|lpm_ff:lpm_ff_component|dffs[6]                                                          ; regout           ;
+; |8bit_compare|Max2data:inst3|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15  ; |8bit_compare|Max2data:inst3|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15  ; combout          ;
+; |8bit_compare|lpm_dff0:inst11|lpm_ff:lpm_ff_component|dffs[7]                                                         ; |8bit_compare|lpm_dff0:inst11|lpm_ff:lpm_ff_component|dffs[7]                                                         ; regout           ;
+; |8bit_compare|lpm_dff0:inst10|lpm_ff:lpm_ff_component|dffs[7]                                                         ; |8bit_compare|lpm_dff0:inst10|lpm_ff:lpm_ff_component|dffs[7]                                                         ; regout           ;
+; |8bit_compare|lpm_dff0:inst11|lpm_ff:lpm_ff_component|dffs[6]                                                         ; |8bit_compare|lpm_dff0:inst11|lpm_ff:lpm_ff_component|dffs[6]                                                         ; regout           ;
+; |8bit_compare|lpm_dff0:inst10|lpm_ff:lpm_ff_component|dffs[6]                                                         ; |8bit_compare|lpm_dff0:inst10|lpm_ff:lpm_ff_component|dffs[6]                                                         ; regout           ;
+; |8bit_compare|Max2data:inst14|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst14|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15 ; |8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component|mux_unc:auto_generated|l1_w7_n0_mux_dataout~15 ; combout          ;
+; |8bit_compare|Max[7]                                                                                                  ; |8bit_compare|Max[7]                                                                                                  ; padio            ;
+; |8bit_compare|MPos[7]                                                                                                 ; |8bit_compare|MPos[7]                                                                                                 ; padio            ;
+; |8bit_compare|MPos[6]                                                                                                 ; |8bit_compare|MPos[6]                                                                                                 ; padio            ;
+; |8bit_compare|MPos[5]                                                                                                 ; |8bit_compare|MPos[5]                                                                                                 ; padio            ;
+; |8bit_compare|MPos[4]                                                                                                 ; |8bit_compare|MPos[4]                                                                                                 ; padio            ;
+; |8bit_compare|MPos[3]                                                                                                 ; |8bit_compare|MPos[3]                                                                                                 ; padio            ;
+; |8bit_compare|MPos[2]                                                                                                 ; |8bit_compare|MPos[2]                                                                                                 ; padio            ;
+; |8bit_compare|MPos[1]                                                                                                 ; |8bit_compare|MPos[1]                                                                                                 ; padio            ;
+; |8bit_compare|MPos[0]                                                                                                 ; |8bit_compare|MPos[0]                                                                                                 ; padio            ;
+; |8bit_compare|Data[7]                                                                                                 ; |8bit_compare|Data[7]~corein                                                                                          ; combout          ;
+; |8bit_compare|En                                                                                                      ; |8bit_compare|En~corein                                                                                               ; combout          ;
+; |8bit_compare|Data[6]                                                                                                 ; |8bit_compare|Data[6]~corein                                                                                          ; combout          ;
++-----------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 8.1 Build 163 10/28/2008 SJ Full Version
+    Info: Processing started: Fri Oct 28 15:23:22 2022
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off 8bit_compare -c 8bit_compare
+Info: Using vector source file "D:/OneDrive_for_nannan/OneDrive - jsmwyz/ื๗าต/FPGA/8bit_compare/8bit_compare.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of 8bit_compare.vwf called 8bit_compare.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      80.87 %
+Info: Number of transitions in simulation is 7117
+Info: Vector file 8bit_compare.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 162 megabytes
+    Info: Processing ended: Fri Oct 28 15:23:23 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,9 @@
+Warning (10268): Verilog HDL information at fft.v(46): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at fft.v(5): object "f_0_r" differs only in case from object "F_0_r" in the same scope
+Info (10281): Verilog HDL Declaration information at fft.v(6): object "f_1_r" differs only in case from object "F_1_r" in the same scope
+Info (10281): Verilog HDL Declaration information at fft.v(7): object "f_2_r" differs only in case from object "F_2_r" in the same scope
+Info (10281): Verilog HDL Declaration information at fft.v(8): object "f_3_r" differs only in case from object "F_3_r" in the same scope
+Info (10281): Verilog HDL Declaration information at fft.v(10): object "f_0_i" differs only in case from object "F_0_i" in the same scope
+Info (10281): Verilog HDL Declaration information at fft.v(11): object "f_1_i" differs only in case from object "F_1_i" in the same scope
+Info (10281): Verilog HDL Declaration information at fft.v(12): object "f_2_i" differs only in case from object "F_2_i" in the same scope
+Info (10281): Verilog HDL Declaration information at fft.v(13): object "f_3_i" differs only in case from object "F_3_i" in the same scope

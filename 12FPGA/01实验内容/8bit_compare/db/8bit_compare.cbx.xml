@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="8bit_compare">
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst14|lpm_mux0:inst2|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_unc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst15|lpm_mux0:inst1|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_unc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst17|lpm_compare0:inst|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_hig.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst|lpm_compare0:inst|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_hig.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|lpm_constant0:inst23|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_tl6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst15|lpm_mux0:inst2|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_unc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst16|lpm_mux0:inst1|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_unc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|lpm_constant0:inst24|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_tl6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst16|lpm_mux0:inst2|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_unc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst17|lpm_mux0:inst1|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_unc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst2|lpm_compare0:inst|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_hig.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst|lpm_mux0:inst1|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_unc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|lpm_constant0:inst25|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_tl6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst17|lpm_mux0:inst2|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_unc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst3|lpm_compare0:inst|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_hig.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst|lpm_mux0:inst2|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_unc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|lpm_constant0:inst26|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_tl6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst2|lpm_mux0:inst1|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_unc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|lpm_constant0:inst27|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_tl6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst14|lpm_compare0:inst|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_hig.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst2|lpm_mux0:inst2|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_unc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst3|lpm_mux0:inst1|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_unc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst15|lpm_compare0:inst|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_hig.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst3|lpm_mux0:inst2|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_unc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|lpm_constant0:inst12|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_tl6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst14|lpm_mux0:inst1|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_unc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|Max2data:inst16|lpm_compare0:inst|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_hig.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|lpm_constant0:inst13|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_tl6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|8bit_compare|lpm_constant0:inst22|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_tl6.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

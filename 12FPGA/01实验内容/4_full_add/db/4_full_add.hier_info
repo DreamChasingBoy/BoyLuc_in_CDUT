@@ -1,0 +1,120 @@
+|4_full_add
+CO <= full_add:inst.CO
+A[0] => full_add:inst4.A
+A[1] => full_add:inst3.A
+A[2] => full_add:inst2.A
+A[3] => full_add:inst.A
+B[0] => full_add:inst4.B
+B[1] => full_add:inst3.B
+B[2] => full_add:inst2.B
+B[3] => full_add:inst.B
+S[0] <= SS[0].DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= SS[1].DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= SS[2].DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= SS[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4_full_add|full_add:inst
+S <= half_add:inst1.S
+CI => half_add:inst1.A
+A => half_add:inst.A
+B => half_add:inst.B
+CO <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4_full_add|full_add:inst|half_add:inst1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+CO <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4_full_add|full_add:inst|half_add:inst
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+CO <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4_full_add|full_add:inst2
+S <= half_add:inst1.S
+CI => half_add:inst1.A
+A => half_add:inst.A
+B => half_add:inst.B
+CO <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4_full_add|full_add:inst2|half_add:inst1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+CO <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4_full_add|full_add:inst2|half_add:inst
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+CO <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4_full_add|full_add:inst3
+S <= half_add:inst1.S
+CI => half_add:inst1.A
+A => half_add:inst.A
+B => half_add:inst.B
+CO <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4_full_add|full_add:inst3|half_add:inst1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+CO <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4_full_add|full_add:inst3|half_add:inst
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+CO <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4_full_add|full_add:inst4
+S <= half_add:inst1.S
+CI => half_add:inst1.A
+A => half_add:inst.A
+B => half_add:inst.B
+CO <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4_full_add|full_add:inst4|half_add:inst1
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+CO <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|4_full_add|full_add:inst4|half_add:inst
+S <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+CO <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+

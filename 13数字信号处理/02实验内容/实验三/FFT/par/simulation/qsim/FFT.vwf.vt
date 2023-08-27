@@ -1,0 +1,197 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "04/14/2023 22:08:28"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    FFT
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module FFT_vlg_sample_tst(
+	clk_n,
+	shur,
+	sampler_tx
+);
+input  clk_n;
+input  shur;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(clk_n or shur)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module FFT_vlg_check_tst (
+	eighttimes,
+	sampler_rx
+);
+input  eighttimes;
+input sampler_rx;
+
+reg  eighttimes_expected;
+
+reg  eighttimes_prev;
+
+reg  eighttimes_expected_prev;
+
+reg  last_eighttimes_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:1] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 1'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	eighttimes_prev = eighttimes;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	eighttimes_expected_prev = eighttimes_expected;
+end
+
+
+
+// expected eighttimes
+initial
+begin
+	eighttimes_expected = 1'bX;
+end 
+// generate trigger
+always @(eighttimes_expected or eighttimes)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected eighttimes = %b | ",eighttimes_expected_prev);
+	$display("| real eighttimes = %b | ",eighttimes_prev);
+`endif
+	if (
+		( eighttimes_expected_prev !== 1'bx ) && ( eighttimes_prev !== eighttimes_expected_prev )
+		&& ((eighttimes_expected_prev !== last_eighttimes_exp) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port eighttimes :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", eighttimes_expected_prev);
+		$display ("     Real value = %b", eighttimes_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_eighttimes_exp = eighttimes_expected_prev;
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#1000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module FFT_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg clk_n;
+reg shur;
+// wires                                               
+wire eighttimes;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+FFT i1 (
+// port map - connection between master ports and signals/registers   
+	.clk_n(clk_n),
+	.eighttimes(eighttimes),
+	.shur(shur)
+);
+
+// clk_n
+always
+begin
+	clk_n = 1'b0;
+	clk_n = #5000 1'b1;
+	#5000;
+end 
+
+// shur
+initial
+begin
+	shur = 1'b0;
+end 
+
+FFT_vlg_sample_tst tb_sample (
+	.clk_n(clk_n),
+	.shur(shur),
+	.sampler_tx(sampler)
+);
+
+FFT_vlg_check_tst tb_out(
+	.eighttimes(eighttimes),
+	.sampler_rx(sampler)
+);
+endmodule
+

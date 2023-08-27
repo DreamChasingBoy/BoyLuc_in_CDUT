@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="RAM">
+		<CBX_INST_ENTRY INSTANCE_NAME="|RAM|time:inst9|lpm_counter0:inst|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_0oj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RAM|time:inst9|lpm_counter1:inst3|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_p3i.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RAM|time:inst9|lpm_mux0:inst2|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_fle.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RAM|buff:inst|lpm_counter2:inst|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_u3i.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RAM|buff:inst|lpm_ram_dp0:inst1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_g7k1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RAM|mtROM:inst2|lpm_counter3:inst1|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_rlh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RAM|mtROM:inst2|lpm_rom0:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_bp61.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RAM|time:inst9|lpm_compare0:inst1|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_hig.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|RAM|time:inst9|lpm_constant0:inst4|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_lh6.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,33 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x0bde4a50: edt_ged + 0x84a50 (_DllMain@12 + 0x57a90)
+	</callstack>
+	<error>Current editor: GED, GED</error>
+	<date>Fri Oct 28 13:29:15 2022</date>
+	<version>Quartus II Version 8.1 Build 163 10/28/2008 SJ Full Version</version>
+	<full_error>Access Violation at 0X0BDE4A50
+Current editor: GED, GED
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Full Version </full_error>
+</internal_error>
+
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>unknown</sub_system>
+	<file>unknown</file>
+	<line>0</line>
+	<callstack>
+	0x6f422e74: omp_qexe + 0x12e0bc0f
+	0x1185861a:
+	</callstack>
+	<error>Current editor: WED, RPW, GED, GED, GED</error>
+	<date>Fri Oct 28 13:52:43 2022</date>
+	<version>Quartus II Version 8.1 Build 163 10/28/2008 SJ Full Version</version>
+	<full_error>Access Violation at 0X6F422E74
+Current editor: WED, RPW, GED, GED, GED
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Full Version </full_error>
+</internal_error>
+

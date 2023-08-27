@@ -1,0 +1,32 @@
+% t=linspace(-10,10,1000);
+% b0=0;%信号发生突变的时刻
+% ut=stepfun(t,b0);%产生单位的阶跃信号ut
+% b0=-3;
+% utt=stepfun(t,b0);%u(t+3)
+% f=utt-ut;
+% dif=diff(f);
+% dif(1000)=0;
+% subplot(2,2,1),plot(t,dif);
+% title('u(t+3)-u(t)的导数');
+% ff=t.*ut;
+% dif2=diff(ff)*50;
+% dif2(1000)=1;
+% subplot(2,2,2),plot(t,dif2);
+% title('tu(t)的导数');
+% b0=1;
+% uttt=stepfun(t,b0);
+% fff=(t-1).*uttt;
+% dif3=diff(fff)*50;
+% dif3(1000)=1;
+% subplot(2,2,3),plot(t,dif3);
+% title('(t-1)u(t-1)的导数');
+% ffff=exp(2*1i*t);
+% dif4=diff(fffff)*10;
+% dif4(1000)=0;
+% subplot(2,2,4),plot(t,dif4);
+syms x;
+y=exp(2*1i*x);
+z=int(y,x);
+zz=abs(z);
+ezplot(zz);
+%第四个不用画图，此处仅供参考%

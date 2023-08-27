@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 22.755 ns
+From           : denom[1]
+To             : lpm_divide0:inst48|lpm_divide:lpm_divide_component|lpm_divide_oqr:auto_generated|sign_div_unsign_87i:divider|alt_u_div_5kf:divider|DFFStage[1]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 29.899 ns
+From           : lpm_divide0:inst48|lpm_divide:lpm_divide_component|lpm_divide_oqr:auto_generated|sign_div_unsign_87i:divider|alt_u_div_5kf:divider|DFFDenominator[0]
+To             : OUTPUT[0]
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.670 ns
+From           : x[7]
+To             : lpm_dff0:inst9|lpm_ff:lpm_ff_component|dffs[7]~_Duplicate_1
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 51.67 MHz ( period = 19.354 ns )
+From           : lpm_add_sub0:inst47|lpm_add_sub:lpm_add_sub_component|add_sub_mjj:auto_generated|pipeline_dffe[18]
+To             : lpm_divide0:inst48|lpm_divide:lpm_divide_component|lpm_divide_oqr:auto_generated|sign_div_unsign_87i:divider|alt_u_div_5kf:divider|DFFStage[1]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
