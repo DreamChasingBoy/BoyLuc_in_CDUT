@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "数据结构作业1", "数据结构作业1\数据结构作业1.vcxproj", "{D96E70EF-D1F6-4EAB-8CB2-B9BBC763E6DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D96E70EF-D1F6-4EAB-8CB2-B9BBC763E6DD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D96E70EF-D1F6-4EAB-8CB2-B9BBC763E6DD}.Debug|Win32.Build.0 = Debug|Win32
+		{D96E70EF-D1F6-4EAB-8CB2-B9BBC763E6DD}.Release|Win32.ActiveCfg = Release|Win32
+		{D96E70EF-D1F6-4EAB-8CB2-B9BBC763E6DD}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
